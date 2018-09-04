@@ -21,6 +21,8 @@ export 'a/animatedPaddingSample.dart';
 export 'a/animatedPhysicalModelSample.dart';
 export 'a/animatedPositionedSample.dart';
 export 'a/animatedPositionedDirectionalSample.dart';
+export 'a/animatedSizeSample.dart';
+
 
 
 
