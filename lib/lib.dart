@@ -22,6 +22,9 @@ export 'a/animatedPhysicalModelSample.dart';
 export 'a/animatedPositionedSample.dart';
 export 'a/animatedPositionedDirectionalSample.dart';
 export 'a/animatedSizeSample.dart';
+export 'a/animatedSwitcherSample.dart';
+
+
 
 
 
