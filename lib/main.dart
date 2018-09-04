@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
         AnimatedPositionedDirectionalSample.routeName : (BuildContext context) => new AnimatedPositionedDirectionalSample(),
         AnimatedSizeSample.routeName : (BuildContext context) => new AnimatedSizeSample(),
         AnimatedSwitcherSample.routeName : (BuildContext context) => new AnimatedSwitcherSample(),
+        AnimationControllerSample.routeName : (BuildContext context) => new AnimationControllerSample(),
 
       },
     );
