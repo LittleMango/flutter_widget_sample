@@ -7,7 +7,6 @@ class AnimatedWidgetSample extends BaseContentApp {
 
   static const String routeName = 'AnimatedWidgetSample';
 
-  // TODO: implement desc
   @override
   String get desc =>
   '''

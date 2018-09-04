@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
-
 // ignore: must_be_immutable
-class AnimatedPositionedSample extends BaseContentApp {
+class AnimatedPositionedDirectionalSample extends BaseContentApp {
 
-  static const String routeName = 'AnimatedPositionedSample';
+  static const String routeName = 'AnimatedPositionedDirectionalSample';
 
   @override
   String get title => routeName;
@@ -16,16 +15,20 @@ class AnimatedPositionedSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  Positioned widget 的动画版本，需要是 Stack widget 的直接子 widget，
-  可以控制 left top right bottom width height，
+  PositionedDirectional widget 的动画版本，需要是 Stack widget 的直接子 widget，
   
-  在水平方向上不能同时设置 left right 和 width，因为只需要给定其中两个就可以计算得出第三个。
+  PositionedDirectional和Positioned的差别在于前者用start和end适配了rtl和ltr两种方向的布局，
+  
+  如果需要考虑rtl布局，那么推荐使用 AnimatedPositionedDirectional/PositionedDirectional 
+  
+  可以控制 start top end bottom width height，
+  
+  在水平方向上不能同时设置 start end 和 width，因为只需要给定其中两个就可以计算得出第三个。
   
   在垂直方向上同理不能同时设置 top bottom 和 height。
   
-  AnimatedPositioned/Positioned 可以改变widget的位置和宽高，所以每一帧都需要重画和重新布局。
+  AnimatedPositionedDirectional/PositionedDirectional 可以改变widget的位置和宽高，所以每一帧都需要重画和重新布局。
   如果我们只需要改变widget的位置，那么使用 SlideTransition，它在每一帧中只进行重绘，不进行重新布局。
-  
   ''';
 
   @override
@@ -33,9 +36,11 @@ class AnimatedPositionedSample extends BaseContentApp {
   '''
   Stack(
     children: <Widget>[
-      AnimatedPositioned(
-        left: _left,
+      AnimatedPositionedDirectional(
+        start: _start,
         top: _top,
+        width: _width,
+        height: _height,
         child: Image.asset('images/img.jpeg'),
         duration: const Duration(seconds: 1),
       )
@@ -51,7 +56,7 @@ class _Sample extends StatefulWidget {
 
 class _SampleState extends State<_Sample> {
 
-  double _left = 0.0;
+  double _start = 0.0;
   double _top = 0.0;
   double _height = 80.0;
   double _width = 80.0;
@@ -59,13 +64,13 @@ class _SampleState extends State<_Sample> {
 
   void _change() {
     setState(() {
-      if (_left <= 0) {
-        _left = 100.0;
+      if (_start <= 0) {
+        _start = 100.0;
         _top = 50.0;
         _height = 150.0;
         _width = 150.0;
       } else {
-        _left = 0.0;
+        _start = 0.0;
         _top = 0.0;
         _height = 80.0;
         _width = 80.0;
@@ -82,8 +87,8 @@ class _SampleState extends State<_Sample> {
           height: 300.0,
           child: Stack(
             children: <Widget>[
-              AnimatedPositioned(
-                left: _left,
+              AnimatedPositionedDirectional(
+                start: _start,
                 top: _top,
                 width: _width,
                 height: _height,

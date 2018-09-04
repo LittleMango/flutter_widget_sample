@@ -62,6 +62,6 @@ List<String> getSamples() {
   list.add(AnimatedPaddingSample.routeName);
   list.add(AnimatedPhysicalModelSample.routeName);
   list.add(AnimatedPositionedSample.routeName);
-
+  list.add(AnimatedPositionedDirectionalSample.routeName);
   return list;
 }

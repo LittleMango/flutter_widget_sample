@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         AnimatedPaddingSample.routeName : (BuildContext context) => new AnimatedPaddingSample(),
         AnimatedPhysicalModelSample.routeName : (BuildContext context) => new AnimatedPhysicalModelSample(),
         AnimatedPositionedSample.routeName : (BuildContext context) => new AnimatedPositionedSample(),
+        AnimatedPositionedDirectionalSample.routeName : (BuildContext context) => new AnimatedPositionedDirectionalSample(),
 
       },
     );

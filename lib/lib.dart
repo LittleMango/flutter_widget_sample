@@ -20,6 +20,8 @@ export 'a/animatedOpacitySample.dart';
 export 'a/animatedPaddingSample.dart';
 export 'a/animatedPhysicalModelSample.dart';
 export 'a/animatedPositionedSample.dart';
+export 'a/animatedPositionedDirectionalSample.dart';
+
 
 
 
