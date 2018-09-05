@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         AnimatedSwitcherSample.routeName : (BuildContext context) => new AnimatedSwitcherSample(),
         AnimationControllerSample.routeName : (BuildContext context) => new AnimationControllerSample(),
         AnimatedThemeSample.routeName : (BuildContext context) => new AnimatedThemeSample(),
+        AppBarSample.routeName : (BuildContext context) => new AppBarSample(),
 
       },
     );

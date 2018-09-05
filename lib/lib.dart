@@ -25,6 +25,8 @@ export 'a/animatedSizeSample.dart';
 export 'a/animatedSwitcherSample.dart';
 export 'a/animationControllerSample.dart';
 export 'a/animatedThemeSample.dart';
+export 'a/appBarSample.dart';
+
 
 
 
