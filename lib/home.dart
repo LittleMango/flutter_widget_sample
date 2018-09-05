@@ -70,8 +70,7 @@ List<String> getSamples() {
   list.add(AssetImageSample.routeName);
 
   list.add(BackButtonSample.routeName);
-
-
+  list.add(BackButtonIconSample.routeName);
 
 
   return list;

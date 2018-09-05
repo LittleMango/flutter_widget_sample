@@ -30,6 +30,9 @@ export 'a/aspectRatioSample.dart';
 export 'a/assetImageSample.dart';
 
 export 'b/backButtonSample.dart';
+export 'b/backButtonIconSample.dart';
+
+
 
 
 

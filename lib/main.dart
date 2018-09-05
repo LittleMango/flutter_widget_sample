@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
         AssetImageSample.routeName : (BuildContext context) => new AssetImageSample(),
 
         BackButtonSample.routeName : (BuildContext context) => new BackButtonSample(),
+        BackButtonIconSample.routeName : (BuildContext context) => new BackButtonIconSample(),
 
       },
     );
