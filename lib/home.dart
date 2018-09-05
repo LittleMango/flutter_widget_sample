@@ -66,6 +66,7 @@ List<String> getSamples() {
   list.add(AnimatedSizeSample.routeName);
   list.add(AnimatedSwitcherSample.routeName);
   list.add(AnimationControllerSample.routeName);
+  list.add(AnimatedThemeSample.routeName);
 
   return list;
 }

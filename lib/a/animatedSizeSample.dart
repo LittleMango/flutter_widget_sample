@@ -27,7 +27,18 @@ class AnimatedSizeSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode => '';
+  String get sampleCode =>
+  '''
+  AnimatedSize(
+    child: Container(
+      height: _height,
+      width: _width,
+      child: Image.asset('images/img.jpeg'),
+    ),
+    duration: const Duration(seconds: 5),
+    vsync: this
+  ),
+  ''';
 
   @override
   String get title => routeName;
@@ -68,7 +79,8 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
               child: Image.asset('images/img.jpeg'),
             ),
             duration: const Duration(seconds: 5),
-            vsync: this),
+            vsync: this
+        ),
         SizedBox(height: 20.0),
         RaisedButton(
             child: Text('点击切换动画'),
