@@ -27,7 +27,7 @@ export 'a/animationControllerSample.dart';
 export 'a/animatedThemeSample.dart';
 export 'a/appBarSample.dart';
 export 'a/aspectRatioSample.dart';
-
+export 'a/assetImageSample.dart';
 
 
 

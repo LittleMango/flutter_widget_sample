@@ -69,6 +69,8 @@ List<String> getSamples() {
   list.add(AnimatedThemeSample.routeName);
   list.add(AppBarSample.routeName);
   list.add(AspectRatioSample.routeName);
+  list.add(AssetImageSample.routeName);
+
 
 
   return list;
