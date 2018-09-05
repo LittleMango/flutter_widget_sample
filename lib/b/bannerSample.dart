@@ -19,7 +19,7 @@ class BannerSample extends BaseContentApp {
   可以设置Banner所在位置，可以设置到四个角落，还可以设置背景颜色，文字方向，和文字样式。
   
   同样的，CheckedModeBanner也是一个类似的widget，它在widgetApp的appbar右上角装饰了一个Debug的Banner，
-  该Banner只在debug版本中出现，release版本自动消失。
+  该CheckedModeBanner只在debug版本中出现，release版本自动消失。
   
   不过Banner则可以出现在Debug和Release版本中。
 
@@ -39,7 +39,6 @@ class BannerSample extends BaseContentApp {
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(

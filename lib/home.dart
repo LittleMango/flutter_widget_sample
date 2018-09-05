@@ -73,6 +73,8 @@ List<String> getSamples() {
   list.add(BackButtonIconSample.routeName);
   list.add(BackdropFilterSample.routeName);
   list.add(BannerSample.routeName);
+  list.add(BaselineSample.routeName);
+
 
 
   return list;
