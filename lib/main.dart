@@ -41,6 +41,8 @@ class MyApp extends StatelessWidget {
 
         BackButtonSample.routeName : (BuildContext context) => new BackButtonSample(),
         BackButtonIconSample.routeName : (BuildContext context) => new BackButtonIconSample(),
+        BackdropFilterSample.routeName : (BuildContext context) => new BackdropFilterSample(),
+
 
       },
     );
