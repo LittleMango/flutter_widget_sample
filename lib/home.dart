@@ -74,8 +74,7 @@ List<String> getSamples() {
   list.add(BackdropFilterSample.routeName);
   list.add(BannerSample.routeName);
   list.add(BaselineSample.routeName);
-
-
+  list.add(BeveledRectangleBorderSample.routeName);
 
   return list;
 }
