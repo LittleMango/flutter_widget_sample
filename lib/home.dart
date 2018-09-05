@@ -72,7 +72,7 @@ List<String> getSamples() {
   list.add(BackButtonSample.routeName);
   list.add(BackButtonIconSample.routeName);
   list.add(BackdropFilterSample.routeName);
-
+  list.add(BannerSample.routeName);
 
 
   return list;
