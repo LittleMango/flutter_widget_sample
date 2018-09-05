@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         AnimationControllerSample.routeName : (BuildContext context) => new AnimationControllerSample(),
         AnimatedThemeSample.routeName : (BuildContext context) => new AnimatedThemeSample(),
         AppBarSample.routeName : (BuildContext context) => new AppBarSample(),
-
+        AspectRatioSample.routeName : (BuildContext context) => new AspectRatioSample(),
       },
     );
   }
