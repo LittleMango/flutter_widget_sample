@@ -87,7 +87,7 @@ class _SampleState extends State<_Sample> {
         );
       case 1:
         return Image.asset('images/img.jpeg');
-      case 2:
+      default:
         return Container(
           height: 100.0,
           width: 100.0,
