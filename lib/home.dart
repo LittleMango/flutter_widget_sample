@@ -6,15 +6,13 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _context = context;
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('Flutter UI Sample'),
         ),
         body: ListView(
           children: _buildItems(),
         ),
-      ),
     );
   }
 
@@ -70,6 +68,9 @@ List<String> getSamples() {
   list.add(AppBarSample.routeName);
   list.add(AspectRatioSample.routeName);
   list.add(AssetImageSample.routeName);
+
+  list.add(BackButtonSample.routeName);
+
 
 
 

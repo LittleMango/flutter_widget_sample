@@ -8,8 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: new Home(),
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => new Home(),
         AboutDialogSample.routeName : (BuildContext context) => new AboutDialogSample(),
         ActionChipSample.routeName : (BuildContext context) => new ActionChipSample(),
         AlertDialogSample.routeName : (BuildContext context) => new AlertDialogSample(),
@@ -38,6 +38,9 @@ class MyApp extends StatelessWidget {
         AppBarSample.routeName : (BuildContext context) => new AppBarSample(),
         AspectRatioSample.routeName : (BuildContext context) => new AspectRatioSample(),
         AssetImageSample.routeName : (BuildContext context) => new AssetImageSample(),
+
+        BackButtonSample.routeName : (BuildContext context) => new BackButtonSample(),
+
       },
     );
   }

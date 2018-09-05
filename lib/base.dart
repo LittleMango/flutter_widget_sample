@@ -10,13 +10,11 @@ abstract class _Base extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     this.context = context;
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text(title),
         ),
         body: _buildItems(),
-      ),
     );
   }
 
