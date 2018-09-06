@@ -49,29 +49,27 @@ class _SampleState extends State<_Sample> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(BottomNavigationBarSample.routeName),
-        ),
-        body: ListView(
-          children: <Widget>[
-            Text(des),
-          ],
-        ),
-        bottomNavigationBar: new BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.build), title: Text('build')),
-            BottomNavigationBarItem(icon: Icon(Icons.star), title: Text('star')),
-            BottomNavigationBarItem(icon: Icon(Icons.satellite), title: Text('satellite')),
-            BottomNavigationBarItem(icon: Icon(Icons.ac_unit), title: Text('ac_unit')),
-          ],
-          currentIndex: _selectIndex,
-          onTap: (index) {
-            _change(index);
-          },
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(BottomNavigationBarSample.routeName),
+      ),
+      body: ListView(
+        children: <Widget>[
+          Text(des),
+        ],
+      ),
+      bottomNavigationBar: new BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.build), title: Text('build')),
+          BottomNavigationBarItem(icon: Icon(Icons.star), title: Text('star')),
+          BottomNavigationBarItem(icon: Icon(Icons.satellite), title: Text('satellite')),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), title: Text('ac_unit')),
+        ],
+        currentIndex: _selectIndex,
+        onTap: (index) {
+          _change(index);
+        },
       ),
     );
   }

@@ -55,6 +55,7 @@ class MyApp extends StatelessWidget {
         BottomNavigationBarSample.routeName : (BuildContext context) => new BottomNavigationBarSample(),
         BottomSheetSample.routeName : (BuildContext context) => new BottomSheetSample(),
         BouncingScrollPhysicsSample.routeName : (BuildContext context) => new BouncingScrollPhysicsSample(),
+        BoxConstraintsSample.routeName : (BuildContext context) => new BoxConstraintsSample(),
 
 
       },

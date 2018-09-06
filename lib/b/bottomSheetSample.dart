@@ -6,17 +6,15 @@ class BottomSheetSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(BottomSheetSample.routeName),
-        ),
-        body: Center(
-          child: Padding(
-              padding: const EdgeInsets.all(8.0),
-            //这里一定需要抽出一个StatelessWidget/StatefulWidget，这样在新widget 中的build 方法中传入的 context 才是在Scaffold下面的。如果直接传入第八行代码的 context 参数，则无法找到Scaffold。
-            child: _BottomSheet(),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(BottomSheetSample.routeName),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          //这里一定需要抽出一个StatelessWidget/StatefulWidget，这样在新widget 中的build 方法中传入的 context 才是在Scaffold下面的。如果直接传入第八行代码的 context 参数，则无法找到Scaffold。
+          child: _BottomSheet(),
         ),
       ),
     );
