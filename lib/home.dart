@@ -79,6 +79,8 @@ List<String> getSamples() {
   list.add(BorderDirectionalSample.routeName);
   list.add(BorderRadiusSample.routeName);
   list.add(BorderRadiusDirectionalSample.routeName);
+  list.add(BorderRadiusTweenSample.routeName);
+
 
 
 

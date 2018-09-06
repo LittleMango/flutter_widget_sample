@@ -39,6 +39,8 @@ export 'b/borderSample.dart';
 export 'b/borderDirectionalSample.dart';
 export 'b/borderRadiusSample.dart';
 export 'b/borderRadiusDirectionalSample.dart';
+export 'b/borderRadiusTweenSample.dart';
+
 
 
 

@@ -49,11 +49,7 @@ class MyApp extends StatelessWidget {
         BorderDirectionalSample.routeName : (BuildContext context) => new BorderDirectionalSample(),
         BorderRadiusSample.routeName : (BuildContext context) => new BorderRadiusSample(),
         BorderRadiusDirectionalSample.routeName : (BuildContext context) => new BorderRadiusDirectionalSample(),
-
-
-
-
-
+        BorderRadiusTweenSample.routeName : (BuildContext context) => new BorderRadiusTweenSample(),
       },
     );
   }
