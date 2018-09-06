@@ -77,6 +77,10 @@ List<String> getSamples() {
   list.add(BeveledRectangleBorderSample.routeName);
   list.add(BorderSample.routeName);
   list.add(BorderDirectionalSample.routeName);
+  list.add(BorderRadiusSample.routeName);
+  list.add(BorderRadiusDirectionalSample.routeName);
+
+
 
 
 

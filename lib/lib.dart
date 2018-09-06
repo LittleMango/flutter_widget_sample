@@ -37,6 +37,10 @@ export 'b/baselineSample.dart';
 export 'b/beveledRectangleBorderSample.dart';
 export 'b/borderSample.dart';
 export 'b/borderDirectionalSample.dart';
+export 'b/borderRadiusSample.dart';
+export 'b/borderRadiusDirectionalSample.dart';
+
+
 
 
 
