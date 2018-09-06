@@ -42,6 +42,8 @@ export 'b/borderRadiusDirectionalSample.dart';
 export 'b/borderRadiusTweenSample.dart';
 export 'b/borderSideSample.dart';
 export 'b/bottomAppBarSample.dart';
+export 'b/bottomNavigationBarSample.dart';
+
 
 
 
