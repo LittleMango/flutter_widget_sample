@@ -80,6 +80,8 @@ List<String> getSamples() {
   list.add(BorderRadiusSample.routeName);
   list.add(BorderRadiusDirectionalSample.routeName);
   list.add(BorderRadiusTweenSample.routeName);
+  list.add(BorderSideSample.routeName);
+
 
 
 
