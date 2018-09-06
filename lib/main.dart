@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
         BannerSample.routeName : (BuildContext context) => new BannerSample(),
         BaselineSample.routeName : (BuildContext context) => new BaselineSample(),
         BeveledRectangleBorderSample.routeName : (BuildContext context) => new BeveledRectangleBorderSample(),
+        BorderSample.routeName : (BuildContext context) => new BorderSample(),
 
       },
     );

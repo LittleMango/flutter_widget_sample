@@ -23,7 +23,23 @@ class BeveledRectangleBorderSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode => '';
+  String get sampleCode =>
+  '''
+  Material(
+    color: Colors.redAccent,
+    shape: new BeveledRectangleBorder(
+      side: const BorderSide(
+        width: 1.0,
+        style: BorderStyle.none,
+      ),
+      borderRadius:new BorderRadius.circular(_value),
+    ),
+    child: new Container(
+      padding: const EdgeInsets.all(10.0),
+      child: new Text('展示文本信息', style: Theme.of(context).textTheme.display2,),
+    ),
+  );
+  ''';
 
 }
 

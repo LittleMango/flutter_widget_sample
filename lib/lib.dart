@@ -35,6 +35,7 @@ export 'b/backdropFilterSample.dart';
 export 'b/bannerSample.dart';
 export 'b/baselineSample.dart';
 export 'b/beveledRectangleBorderSample.dart';
+export 'b/borderSample.dart';
 
 
 
