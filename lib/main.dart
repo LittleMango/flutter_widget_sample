@@ -53,6 +53,7 @@ class MyApp extends StatelessWidget {
         BorderSideSample.routeName : (BuildContext context) => new BorderSideSample(),
         BottomAppBarSample.routeName : (BuildContext context) => new BottomAppBarSample(),
         BottomNavigationBarSample.routeName : (BuildContext context) => new BottomNavigationBarSample(),
+        BottomSheetSample.routeName : (BuildContext context) => new BottomSheetSample(),
 
 
       },

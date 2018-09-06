@@ -83,7 +83,7 @@ List<String> getSamples() {
   list.add(BorderSideSample.routeName);
   list.add(BottomAppBarSample.routeName);
   list.add(BottomNavigationBarSample.routeName);
-
+  list.add(BottomSheetSample.routeName);
 
 
 

@@ -43,6 +43,8 @@ export 'b/borderRadiusTweenSample.dart';
 export 'b/borderSideSample.dart';
 export 'b/bottomAppBarSample.dart';
 export 'b/bottomNavigationBarSample.dart';
+export 'b/bottomSheetSample.dart';
+
 
 
 

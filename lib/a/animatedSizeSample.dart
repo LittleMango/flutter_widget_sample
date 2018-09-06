@@ -91,8 +91,3 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
     );
   }
 }
-
-void main() {
-  debugPaintSizeEnabled = true;
-  runApp(AnimatedSizeSample());
-}
