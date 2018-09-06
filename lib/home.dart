@@ -84,6 +84,8 @@ List<String> getSamples() {
   list.add(BottomAppBarSample.routeName);
   list.add(BottomNavigationBarSample.routeName);
   list.add(BottomSheetSample.routeName);
+  list.add(BouncingScrollPhysicsSample.routeName);
+
 
 
 
