@@ -1,39 +1,37 @@
 import 'package:flutter/material.dart';
 import 'lib.dart';
+// ignore: must_be_immutable
 class Home extends StatelessWidget {
 
-  BuildContext _context;
+  List<String> items = getSamples();
   @override
   Widget build(BuildContext context) {
-    _context = context;
     return Scaffold(
         appBar: AppBar(
           title: Text('Flutter UI Sample'),
         ),
-        body: ListView(
-          children: _buildItems(),
+        body: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, position) {
+            return _buildItems(context, position);
+          },
         ),
     );
   }
 
-  List<Widget> _buildItems() {
-    List<Widget> list = List();
-    for (String name in getSamples()) {
-      list.add(_buildItem(name, name));
-      list.add(Divider());
-    }
-    return list;
-  }
+  Widget _buildItems(BuildContext context, int position) {
+    String routeName = items[position];
 
-  Widget _buildItem(String content, String routeName) {
-    return GestureDetector(
-      child: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Text(content),
-      ),
-      onTap: () {
-        Navigator.pushNamed(_context, routeName);
-      },
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: Text(routeName),
+          onTap:  () {
+            Navigator.pushNamed(context, routeName);
+          },
+        ),
+        Divider(),
+      ],
     );
   }
 }

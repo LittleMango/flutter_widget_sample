@@ -13,7 +13,10 @@ class CardSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc => '';
+  String get desc =>
+  '''
+  自带阴影、圆角效果的 widget
+  ''';
 
   @override
   String get sampleCode =>
