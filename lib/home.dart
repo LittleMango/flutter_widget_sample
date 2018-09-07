@@ -87,7 +87,7 @@ List<String> getSamples() {
   list.add(BouncingScrollPhysicsSample.routeName);
   list.add(BoxConstraintsSample.routeName);
   list.add(BoxConstraintsTweenSample.routeName);
-
+  list.add(BoxDecorationSample.routeName);
 
   return list;
 }
