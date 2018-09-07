@@ -62,6 +62,7 @@ class MyApp extends StatelessWidget {
         ButtonThemeSample.routeName : (BuildContext context) => new ButtonThemeSample(),
         CardSample.routeName : (BuildContext context) => new CardSample(),
         CenterSample.routeName : (BuildContext context) => new CenterSample(),
+        CheckboxSample.routeName : (BuildContext context) => new CheckboxSample(),
       },
     );
   }

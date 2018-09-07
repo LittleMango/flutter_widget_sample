@@ -92,6 +92,7 @@ List<String> getSamples() {
   list.add(ButtonThemeSample.routeName);
   list.add(CardSample.routeName);
   list.add(CenterSample.routeName);
+  list.add(CheckboxSample.routeName);
 
   return list;
 }
