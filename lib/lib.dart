@@ -51,6 +51,7 @@ export 'b/boxDecorationSample.dart';
 export 'b/buttonBarSample.dart';
 export 'b/buttonThemeSample.dart';
 export 'c/cardSample.dart';
+export 'c/centerSample.dart';
 
 
 

@@ -91,6 +91,7 @@ List<String> getSamples() {
   list.add(ButtonBarSample.routeName);
   list.add(ButtonThemeSample.routeName);
   list.add(CardSample.routeName);
+  list.add(CenterSample.routeName);
 
   return list;
 }
