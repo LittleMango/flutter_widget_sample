@@ -65,6 +65,7 @@ class MyApp extends StatelessWidget {
         CenterSample.routeName : (BuildContext context) => new CenterSample(),
         CheckboxSample.routeName : (BuildContext context) => new CheckboxSample(),
         CheckboxListTileSample.routeName : (BuildContext context) => new CheckboxListTileSample(),
+        CheckedModeBannerSample.routeName : (BuildContext context) => new CheckedModeBannerSample(),
       },
     );
   }
