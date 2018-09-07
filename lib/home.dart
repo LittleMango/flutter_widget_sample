@@ -90,6 +90,7 @@ List<String> getSamples() {
   list.add(BoxDecorationSample.routeName);
   list.add(ButtonBarSample.routeName);
   list.add(ButtonThemeSample.routeName);
+  list.add(CardSample.routeName);
 
   return list;
 }
