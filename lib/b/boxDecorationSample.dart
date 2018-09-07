@@ -31,6 +31,18 @@ class BoxDecorationSample extends BaseContentApp {
       color: Colors.amber,
       shape: BoxShape.rectangle,
       borderRadius: BorderRadius.all(Radius.circular(25.0)),
+      image: DecorationImage(
+        image: ExactAssetImage('images/img.jpeg'),
+      ),
+      gradient: RadialGradient(colors: <Color>[Colors.amber, Colors.white]),
+      boxShadow: <BoxShadow>[
+                BoxShadow(
+                  color: Colors.redAccent,
+                  offset: Offset(0.0, 5.0),
+                  blurRadius: 5.0,
+                  spreadRadius: 10.0
+                ),
+      ],
     ),
   );
   ''';

@@ -48,7 +48,7 @@ export 'b/bouncingScrollPhysicsSample.dart';
 export 'b/boxConstraintsSample.dart';
 export 'b/boxConstraintsTweenSample.dart';
 export 'b/boxDecorationSample.dart';
-
+export 'b/buttonBarSample.dart';
 
 
 

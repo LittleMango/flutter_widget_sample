@@ -88,6 +88,8 @@ List<String> getSamples() {
   list.add(BoxConstraintsSample.routeName);
   list.add(BoxConstraintsTweenSample.routeName);
   list.add(BoxDecorationSample.routeName);
+  list.add(ButtonBarSample.routeName);
+
 
   return list;
 }
