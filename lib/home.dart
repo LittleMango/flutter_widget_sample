@@ -93,6 +93,7 @@ List<String> getSamples() {
   list.add(CheckboxSample.routeName);
   list.add(CheckboxListTileSample.routeName);
   list.add(CheckedModeBannerSample.routeName);
+  list.add(CheckedPopupMenuItemSample.routeName);
 
   return list;
 }
