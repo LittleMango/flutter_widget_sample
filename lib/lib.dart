@@ -49,7 +49,7 @@ export 'b/boxConstraintsSample.dart';
 export 'b/boxConstraintsTweenSample.dart';
 export 'b/boxDecorationSample.dart';
 export 'b/buttonBarSample.dart';
-
+export 'b/buttonThemeSample.dart';
 
 
 

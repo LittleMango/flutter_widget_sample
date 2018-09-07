@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
         BoxConstraintsTweenSample.routeName : (BuildContext context) => new BoxConstraintsTweenSample(),
         BoxDecorationSample.routeName : (BuildContext context) => new BoxDecorationSample(),
         ButtonBarSample.routeName : (BuildContext context) => new ButtonBarSample(),
-
+        ButtonThemeSample.routeName : (BuildContext context) => new ButtonThemeSample(),
       },
     );
   }

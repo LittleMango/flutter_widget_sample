@@ -89,7 +89,7 @@ List<String> getSamples() {
   list.add(BoxConstraintsTweenSample.routeName);
   list.add(BoxDecorationSample.routeName);
   list.add(ButtonBarSample.routeName);
-
+  list.add(ButtonThemeSample.routeName);
 
   return list;
 }
