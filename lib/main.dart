@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
         BottomSheetSample.routeName : (BuildContext context) => new BottomSheetSample(),
         BouncingScrollPhysicsSample.routeName : (BuildContext context) => new BouncingScrollPhysicsSample(),
         BoxConstraintsSample.routeName : (BuildContext context) => new BoxConstraintsSample(),
-
+        BoxConstraintsTweenSample.routeName : (BuildContext context) => new BoxConstraintsTweenSample(),
 
       },
     );

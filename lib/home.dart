@@ -86,6 +86,8 @@ List<String> getSamples() {
   list.add(BottomSheetSample.routeName);
   list.add(BouncingScrollPhysicsSample.routeName);
   list.add(BoxConstraintsSample.routeName);
+  list.add(BoxConstraintsTweenSample.routeName);
+
 
   return list;
 }

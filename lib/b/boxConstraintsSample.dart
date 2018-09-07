@@ -30,8 +30,7 @@ class _Sample extends StatefulWidget {
   _SampleState createState() => _SampleState();
 }
 
-class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
+class _SampleState extends State<_Sample> {
 
   @override
   Widget build(BuildContext context) {
