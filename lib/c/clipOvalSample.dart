@@ -15,7 +15,7 @@ class ClipOvalSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  一个 widget，用来裁剪子widget，让其成员一个椭圆、圆形的 widget，超出这个范围会被裁剪掉不显示。
+  一个 widget，用来裁剪子widget，让其成为一个椭圆、圆形的 widget，超出这个范围会被裁剪掉不显示。
   ''';
 
   @override
@@ -25,6 +25,18 @@ class ClipOvalSample extends BaseContentApp {
     clipper: _ImageClipper(),
     child: Image.asset('images/img.jpeg'),
   ),
+  
+  class _ImageClipper extends CustomClipper<Rect> {
+    @override
+    Rect getClip(Size size) {
+      return Rect.fromLTWH(0.0, size.height / 4, size.width, size.height / 4 * 3);
+    }
+
+    @override
+    bool shouldReclip(CustomClipper<Rect> oldClipper) {
+      return true;
+    }
+  }
   ''';
 }
 

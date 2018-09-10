@@ -75,6 +75,7 @@ class MyApp extends StatelessWidget {
         CircularProgressIndicatorSample.routeName : (BuildContext context) => new CircularProgressIndicatorSample(),
         ClampingScrollPhysicsSample.routeName : (BuildContext context) => new ClampingScrollPhysicsSample(),
         ClipOvalSample.routeName : (BuildContext context) => new ClipOvalSample(),
+        ClipPathSample.routeName : (BuildContext context) => new ClipPathSample(),
       },
     );
   }

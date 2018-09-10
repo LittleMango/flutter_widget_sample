@@ -102,6 +102,7 @@ List<String> getSamples() {
   list.add(CircularProgressIndicatorSample.routeName);
   list.add(ClampingScrollPhysicsSample.routeName);
   list.add(ClipOvalSample.routeName);
+  list.add(ClipPathSample.routeName);
 
   return list;
 }
