@@ -58,6 +58,7 @@ export 'c/checkedModeBannerSample.dart';
 export 'c/checkedPopupMenuItemSample.dart';
 export 'c/chipSample.dart';
 export 'c/chipThemeSample.dart';
+export 'c/choiceChipSample.dart';
 
 
 

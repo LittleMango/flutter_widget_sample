@@ -96,6 +96,7 @@ List<String> getSamples() {
   list.add(CheckedPopupMenuItemSample.routeName);
   list.add(ChipSample.routeName);
   list.add(ChipThemeSample.routeName);
+  list.add(ChoiceChipSample.routeName);
 
   return list;
 }

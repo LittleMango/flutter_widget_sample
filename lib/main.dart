@@ -69,6 +69,7 @@ class MyApp extends StatelessWidget {
         CheckedPopupMenuItemSample.routeName : (BuildContext context) => new CheckedPopupMenuItemSample(),
         ChipSample.routeName : (BuildContext context) => new ChipSample(),
         ChipThemeSample.routeName : (BuildContext context) => new ChipThemeSample(),
+        ChoiceChipSample.routeName : (BuildContext context) => new ChoiceChipSample(),
       },
     );
   }
