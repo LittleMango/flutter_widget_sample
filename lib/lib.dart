@@ -61,6 +61,7 @@ export 'c/chipThemeSample.dart';
 export 'c/choiceChipSample.dart';
 export 'c/circleAvatarSample.dart';
 export 'c/circleBorderSample.dart';
+export 'c/circularProgressIndicatorSample.dart';
 
 
 
