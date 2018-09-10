@@ -97,6 +97,7 @@ List<String> getSamples() {
   list.add(ChipSample.routeName);
   list.add(ChipThemeSample.routeName);
   list.add(ChoiceChipSample.routeName);
+  list.add(CircleAvatarSample.routeName);
 
   return list;
 }

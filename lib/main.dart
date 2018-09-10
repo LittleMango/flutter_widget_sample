@@ -70,6 +70,7 @@ class MyApp extends StatelessWidget {
         ChipSample.routeName : (BuildContext context) => new ChipSample(),
         ChipThemeSample.routeName : (BuildContext context) => new ChipThemeSample(),
         ChoiceChipSample.routeName : (BuildContext context) => new ChoiceChipSample(),
+        CircleAvatarSample.routeName : (BuildContext context) => new CircleAvatarSample(),
       },
     );
   }

@@ -59,6 +59,7 @@ export 'c/checkedPopupMenuItemSample.dart';
 export 'c/chipSample.dart';
 export 'c/chipThemeSample.dart';
 export 'c/choiceChipSample.dart';
+export 'c/circleAvatarSample.dart';
 
 
 
