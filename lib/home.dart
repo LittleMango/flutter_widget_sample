@@ -103,6 +103,7 @@ List<String> getSamples() {
   list.add(ClampingScrollPhysicsSample.routeName);
   list.add(ClipOvalSample.routeName);
   list.add(ClipPathSample.routeName);
+  list.add(ClipRectSample.routeName);
 
   return list;
 }

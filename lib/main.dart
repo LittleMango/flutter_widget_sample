@@ -76,6 +76,7 @@ class MyApp extends StatelessWidget {
         ClampingScrollPhysicsSample.routeName : (BuildContext context) => new ClampingScrollPhysicsSample(),
         ClipOvalSample.routeName : (BuildContext context) => new ClipOvalSample(),
         ClipPathSample.routeName : (BuildContext context) => new ClipPathSample(),
+        ClipRectSample.routeName : (BuildContext context) => new ClipRectSample(),
       },
     );
   }

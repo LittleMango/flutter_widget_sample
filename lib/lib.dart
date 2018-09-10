@@ -65,6 +65,7 @@ export 'c/circularProgressIndicatorSample.dart';
 export 'c/clampingScrollPhysicsSample.dart';
 export 'c/clipOvalSample.dart';
 export 'c/clipPathSample.dart';
+export 'c/clipRectSample.dart';
 
 
 
