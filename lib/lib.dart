@@ -56,6 +56,7 @@ export 'c/checkboxSample.dart';
 export 'c/checkboxListTileSample.dart';
 export 'c/checkedModeBannerSample.dart';
 export 'c/checkedPopupMenuItemSample.dart';
+export 'c/chipSample.dart';
 
 
 

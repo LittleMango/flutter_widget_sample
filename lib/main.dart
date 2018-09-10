@@ -67,6 +67,7 @@ class MyApp extends StatelessWidget {
         CheckboxListTileSample.routeName : (BuildContext context) => new CheckboxListTileSample(),
         CheckedModeBannerSample.routeName : (BuildContext context) => new CheckedModeBannerSample(),
         CheckedPopupMenuItemSample.routeName : (BuildContext context) => new CheckedPopupMenuItemSample(),
+        ChipSample.routeName : (BuildContext context) => new ChipSample(),
       },
     );
   }
