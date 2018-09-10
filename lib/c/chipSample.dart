@@ -14,8 +14,14 @@ class ChipSample extends BaseContentApp {
 
   @override
   String get desc =>
-      '''
-  
+  '''
+  material 设计的芯片。
+
+ 芯片是表示属性，文本，实体或动作的紧凑元素。
+
+  提供非null onDeleted回调将导致芯片包含用于删除芯片的按钮。
+
+  需要其中一个祖先成为Material小部件。该标签， deleteIcon和border参数不能为空。
   ''';
 
   @override
