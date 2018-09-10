@@ -24,6 +24,8 @@ class _AnimatedThemeSampleState extends State<AnimatedThemeSample> {
   }
 
   String get desc => '''
+  Theme 的隐式动画版本。
+  
   AnimatedTheme会将设置的 ThemeData 应用到其所有子 widget 中(除非子 widget 自己设置了主体、样式)，
   
   如果需要做整个 App 的更换主题，可以自定义 ThemeData，然后给所有界面的 scaffold 外面包裹一个 animatedTheme，
@@ -32,8 +34,7 @@ class _AnimatedThemeSampleState extends State<AnimatedThemeSample> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: AnimatedTheme(
+    return AnimatedTheme(
         data: _data,
         child: Scaffold(
           appBar: AppBar(
@@ -53,7 +54,6 @@ class _AnimatedThemeSampleState extends State<AnimatedThemeSample> {
               ],
             ),
           ),
-        ),
       ),
     );
   }

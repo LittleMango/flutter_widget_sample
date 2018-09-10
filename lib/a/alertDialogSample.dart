@@ -42,7 +42,7 @@ class AlertDialogSample extends BaseBtnApp {
   @override
   String get desc =>
       '''
-材料设计警报对话框。
+material样式的警报对话框。
 
 警报对话框会通知用户需要确认的情况。警报对话框具有可选标题和可选的操作列表。标题显示在内容上方，操作显示在内容下方。
 
@@ -50,7 +50,7 @@ class AlertDialogSample extends BaseBtnApp {
 
 对于为用户提供多个选项之间选择的对话框，请考虑使用SimpleDialog。
 
-通常作为子窗口小部件传递给showDialog，后者显示对话框。
+通常作为子 widget传递给showDialog，showDialog是用来显示对话框的方法。
       ''';
 
   @override

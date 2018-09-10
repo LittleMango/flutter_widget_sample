@@ -16,7 +16,7 @@ class AnimatedPositionedSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  Positioned widget 的动画版本，需要是 Stack widget 的直接子 widget，
+  Positioned widget 的隐式动画版本，需要是 Stack widget 的直接子 widget，
   可以控制 left top right bottom width height，
   
   在水平方向上不能同时设置 left right 和 width，因为只需要给定其中两个就可以计算得出第三个。

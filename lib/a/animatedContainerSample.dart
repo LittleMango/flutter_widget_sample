@@ -12,7 +12,7 @@ class AnimatedContainerSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  Container的动画版本，确切地说应该是隐式动画版本，
+  Container的隐式动画版本，
   通过给AnimatedContainer设置时间和插值器之后，当其属性发生变化的时候，会自动动画过度。
   ''';
 

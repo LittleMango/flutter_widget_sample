@@ -5,8 +5,7 @@ class AppBarSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           leading: IconButton(
             icon: new Icon(Icons.menu),
@@ -47,7 +46,6 @@ class AppBarSample extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 

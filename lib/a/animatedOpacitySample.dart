@@ -16,7 +16,7 @@ class AnimatedOpacitySample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  Opacity widget的动画版本，
+  Opacity widget的隐式动画版本，
   动画不透明度相对昂贵，因为它需要将子画面绘制到中间缓冲区中。
   ''';
 

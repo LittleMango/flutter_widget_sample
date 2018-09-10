@@ -12,7 +12,7 @@ class AnimatedCrossFadeSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-一个 widget，可以淡入淡出两个子widget（只能是两个）
+一个 widget，可以淡入淡出两个子widget（只能是两个），换句话说是隐式动画的渐入渐出过渡动画。
 
 通过给crossFadeState属性赋值CrossFadeState.showFirst 或 CrossFadeState.showSecond来决定动画显示哪一个widget，
 

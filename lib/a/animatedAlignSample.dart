@@ -10,9 +10,9 @@ class AnimatedAlignSample extends BaseContentApp {
   @override
   String get desc =>
       '''
-  Align的动画版本，只要给定的对齐发生变化，就会在给定的持续时间内自动转换孩子的位置。
+  Align的隐式动画版本，只要给定的对齐发生变化，就会在给定的持续时间内自动转换孩子的位置。
   主要用来做一次性的对齐动画，不能监听其动画生命周期，如果需要反复做对齐动画，考虑用
-  AnimationController 配合 AlignmentGeometryTween使用。
+  AnimationController 配合 AlignmentGeometryTween 和 Align使用。
   ''';
 
   @override

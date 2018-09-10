@@ -24,7 +24,9 @@ class AnimationControllerSample extends BaseContentApp {
 
 默认情况下，AnimationController在给定的持续时间内线性生成范围从0.0到1.0的值。
 
-AnimationController需要一个TickerProvider，一般是在State<StatefulWiget>类中with一个SingleTickerProviderStateMixin。
+AnimationController需要一个TickerProvider，一般是在State<StatefulWiget>类中with一个TickerProvider的子类 。
+当State<StatefulWiget>对象只持有一个 controller的时候，使用SingleTickerProviderStateMixin，效率会更高
+当有多个 controller 的时候使用TickerProviderStateMixin。
 
 需要在dispose方法中调用controller.dispose()，避免动画泄漏。
       ''';
@@ -58,7 +60,7 @@ class _Sample extends StatefulWidget {
   _SampleState createState() => _SampleState();
 }
 
-class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
+class _SampleState extends State<_Sample> with TickerProviderStateMixin {
 
   AnimationController _controller;
 

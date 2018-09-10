@@ -16,7 +16,7 @@ class AnimatedListSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  listView的动画版本，主要是为了让 listview 增加、删除 item 时候有动画效果，
+  listView的隐式动画版本，主要是为了让 listview 增加、删除 item 时候有动画效果，
   为此需要同步维护数据源和一个 GlobalKey<AnimatedListState>对象，
   GlobalKey是一个 widget 的标志，通过这个 key 我们可以获取到AnimatedListState 状态列表，
   通过同时对数据源和状态列表的增加或者修改，在AnimatedList的 itemBuilder 参数中，

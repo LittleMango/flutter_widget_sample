@@ -12,13 +12,13 @@ class AnimatedPhysicalModelSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  PhysicalModel的动画版本，可以用来控制圆角、阴影、elevation，以及形状(圆形或者矩形)
+  PhysicalModel的隐式动画版本，可以用来控制圆角、阴影、elevation，以及形状(圆形或者矩形)等 material 属性。
   
   PhysicalModel会自动裁剪子 widget，而 Container 是不会的
   
   所以当需要圆角矩形的图片时，可以考虑使用PhysicalModel或其动画版本。
   
-  通过给 Container 设置一个原型的 decoration 是没法达到效果的。
+  通过给 Container 设置一个 decoration作为背景 是没法达到裁剪效果的。
   
   注意：PhysicalModel的尺寸是包裹内容，所以如果子 widget 是无尺寸的，那么是看不到PhysicalModel的
   ''';

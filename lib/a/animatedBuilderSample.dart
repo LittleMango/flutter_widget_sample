@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
-import 'dart:math' as Math;
 
 class AnimatedBuilderSample extends BaseContentApp {
 
@@ -63,11 +62,11 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return new AnimatedBuilder(
+    return AnimatedBuilder(
       animation: _controller,
-      child: new Container(height: 100.0, color: Colors.green),
+      child: Container(height: 100.0, color: Colors.green),
       builder: (BuildContext context, Widget child) {
-        return new Transform.scale(
+        return Transform.scale(
           scale: _controller.value ,
           child: child,
         );

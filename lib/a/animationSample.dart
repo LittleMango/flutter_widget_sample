@@ -40,7 +40,6 @@ class AnimationSample extends BaseContentApp {
     ).animate(controller);
       ''';
 
-  // TODO: implement title
   @override
   String get title => routeName;
 }

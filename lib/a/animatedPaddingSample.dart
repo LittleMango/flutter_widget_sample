@@ -15,7 +15,7 @@ class AnimatedPaddingSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  Padding widget的动画版本.
+  Padding widget的隐式动画版本.
   ''';
 
   @override

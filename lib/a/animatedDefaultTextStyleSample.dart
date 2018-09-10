@@ -15,7 +15,7 @@ class AnimatedDefaultTextStyleSample extends BaseContentApp {
   @override
   String get desc =>
   '''
-  DefaultTextStyle的动画版本，给定的样式发生更改时会自动动画过渡。
+  DefaultTextStyle的隐式动画版本，给定的样式发生更改时会自动动画过渡。
   注意，其子 Widget 不能设置文本样式，否则会应用子 Widget 的样式，而看不出效果。
   ''';
 
