@@ -104,6 +104,7 @@ List<String> getSamples() {
   list.add(ClipOvalSample.routeName);
   list.add(ClipPathSample.routeName);
   list.add(ClipRectSample.routeName);
+  list.add(ClipRRectSample.routeName);
 
   return list;
 }
