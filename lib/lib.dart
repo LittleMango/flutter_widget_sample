@@ -67,6 +67,7 @@ export 'c/clipOvalSample.dart';
 export 'c/clipPathSample.dart';
 export 'c/clipRectSample.dart';
 export 'c/clipRRectSample.dart';
+export 'c/closeButtonSample.dart';
 
 
 

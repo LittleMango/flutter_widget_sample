@@ -78,6 +78,7 @@ class MyApp extends StatelessWidget {
         ClipPathSample.routeName : (BuildContext context) => new ClipPathSample(),
         ClipRectSample.routeName : (BuildContext context) => new ClipRectSample(),
         ClipRRectSample.routeName : (BuildContext context) => new ClipRRectSample(),
+        CloseButtonSample.routeName : (BuildContext context) => new CloseButtonSample(),
       },
     );
   }
