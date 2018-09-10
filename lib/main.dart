@@ -73,6 +73,7 @@ class MyApp extends StatelessWidget {
         CircleAvatarSample.routeName : (BuildContext context) => new CircleAvatarSample(),
         CircleBorderSample.routeName : (BuildContext context) => new CircleBorderSample(),
         CircularProgressIndicatorSample.routeName : (BuildContext context) => new CircularProgressIndicatorSample(),
+        ClampingScrollPhysicsSample.routeName : (BuildContext context) => new ClampingScrollPhysicsSample(),
       },
     );
   }

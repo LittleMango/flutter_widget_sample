@@ -62,6 +62,7 @@ export 'c/choiceChipSample.dart';
 export 'c/circleAvatarSample.dart';
 export 'c/circleBorderSample.dart';
 export 'c/circularProgressIndicatorSample.dart';
+export 'c/clampingScrollPhysicsSample.dart';
 
 
 
