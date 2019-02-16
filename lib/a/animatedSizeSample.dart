@@ -4,15 +4,13 @@ import 'package:flutter/rendering.dart';
 
 // ignore: must_be_immutable
 class AnimatedSizeSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedSizeSample';
 
   @override
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   只要给定子项的大小发生更改，就会在给定的持续时间内自动转换其大小。
   
   注意：当给定子项大小发生改变的时候有以下需要注意的地方
@@ -27,8 +25,7 @@ class AnimatedSizeSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   AnimatedSize(
     child: Container(
       height: _height,
@@ -42,7 +39,6 @@ class AnimatedSizeSample extends BaseContentApp {
 
   @override
   String get title => routeName;
-
 }
 
 class _Sample extends StatefulWidget {
@@ -51,10 +47,8 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   double _height = 150.0;
   double _width = 150.0;
-
 
   void _change() {
     setState(() {
@@ -79,12 +73,11 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
               child: Image.asset('images/img.jpeg'),
             ),
             duration: const Duration(seconds: 5),
-            vsync: this
-        ),
+            vsync: this),
         SizedBox(height: 20.0),
         RaisedButton(
             child: Text('点击切换动画'),
-            onPressed: (){
+            onPressed: () {
               _change();
             }),
       ],

@@ -3,7 +3,6 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedIconSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedIconSample';
 
   @override
@@ -13,8 +12,7 @@ class AnimatedIconSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
 在给定的动画进度中显示动画图标。
 
 可用图标在AnimatedIcons中指定。
@@ -27,8 +25,7 @@ class AnimatedIconSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   controller = AnimationController(vsync: this, duration: const Duration(seconds: 2))
       ..repeat();
       
@@ -37,7 +34,6 @@ class AnimatedIconSample extends BaseContentApp {
     progress: controller,
   );
   ''';
-
 }
 
 class _Sample extends StatefulWidget {
@@ -46,14 +42,14 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController controller;
 
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(vsync: this, duration: const Duration(seconds: 2))
-      ..repeat();
+    controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 2))
+          ..repeat();
   }
 
   @override
@@ -64,7 +60,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return  Wrap(
+    return Wrap(
       children: <Widget>[
         new AnimatedIcon(
           icon: AnimatedIcons.add_event,

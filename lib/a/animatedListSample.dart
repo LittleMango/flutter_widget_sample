@@ -3,19 +3,16 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedListSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedListSample';
 
   @override
   String get title => routeName;
 
-
   @override
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   listView的隐式动画版本，主要是为了让 listview 增加、删除 item 时候有动画效果，
   为此需要同步维护数据源和一个 GlobalKey<AnimatedListState>对象，
   GlobalKey是一个 widget 的标志，通过这个 key 我们可以获取到AnimatedListState 状态列表，
@@ -26,18 +23,16 @@ class AnimatedListSample extends BaseContentApp {
 
   @override
   String get sampleCode => '逻辑代码比较多，建议之间看代码';
-
 }
 
 class _Sample extends StatefulWidget {
-
   @override
   _SampleState createState() => _SampleState();
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
-  final GlobalKey<AnimatedListState> _listKey = new GlobalKey<AnimatedListState>();
+  final GlobalKey<AnimatedListState> _listKey =
+      new GlobalKey<AnimatedListState>();
   ListModel<int> _list;
   int _selectedItem;
   int _nextItem; // The next item inserted when the user presses the '+' button.
@@ -54,7 +49,8 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
   }
 
   // Used to build list items that haven't been removed.
-  Widget _buildItem(BuildContext context, int index, Animation<double> animation) {
+  Widget _buildItem(
+      BuildContext context, int index, Animation<double> animation) {
     return new CardItem(
       animation: animation,
       item: _list[index],
@@ -72,7 +68,8 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
   // completed (even though it's gone as far this ListModel is concerned).
   // The widget will be used by the [AnimatedListState.removeItem] method's
   // [AnimatedListRemovedItemBuilder] parameter.
-  Widget _buildRemovedItem(int item, BuildContext context, Animation<double> animation) {
+  Widget _buildRemovedItem(
+      int item, BuildContext context, Animation<double> animation) {
     return new CardItem(
       animation: animation,
       item: item,
@@ -83,7 +80,8 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
 
   // Insert the "next item" into the list model.
   void _insert() {
-    final int index = _selectedItem == null ? _list.length : _list.indexOf(_selectedItem);
+    final int index =
+        _selectedItem == null ? _list.length : _list.indexOf(_selectedItem);
     _list.insert(index, _nextItem++);
   }
 
@@ -125,7 +123,8 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
           ],
         ),
         SizedBox(height: 20.0),
-        new Text('滚动的时候超过边界的话，是 flutter 的 bug，为此我们可以在 listView 外面套一个 ClipRect widget'),
+        new Text(
+            '滚动的时候超过边界的话，是 flutter 的 bug，为此我们可以在 listView 外面套一个 ClipRect widget'),
       ],
     );
   }
@@ -136,7 +135,7 @@ class ListModel<E> {
     @required this.listKey,
     @required this.removedItemBuilder,
     Iterable<E> initialItems,
-  }) : assert(listKey != null),
+  })  : assert(listKey != null),
         assert(removedItemBuilder != null),
         _items = new List<E>.from(initialItems ?? <E>[]);
 
@@ -154,7 +153,8 @@ class ListModel<E> {
   E removeAt(int index) {
     final E removedItem = _items.removeAt(index);
     if (removedItem != null) {
-      _animatedList.removeItem(index, (BuildContext context, Animation<double> animation) {
+      _animatedList.removeItem(index,
+          (BuildContext context, Animation<double> animation) {
         return removedItemBuilder(removedItem, context, animation);
       });
     }
@@ -162,18 +162,20 @@ class ListModel<E> {
   }
 
   int get length => _items.length;
+
   E operator [](int index) => _items[index];
+
   int indexOf(E item) => _items.indexOf(item);
 }
 
 class CardItem extends StatelessWidget {
-  const CardItem({
-    Key key,
-    @required this.animation,
-    this.onTap,
-    @required this.item,
-    this.selected: false
-  }) : assert(animation != null),
+  const CardItem(
+      {Key key,
+      @required this.animation,
+      this.onTap,
+      @required this.item,
+      this.selected: false})
+      : assert(animation != null),
         assert(item != null && item >= 0),
         assert(selected != null),
         super(key: key);

@@ -3,7 +3,6 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedSwitcherSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedSwitcherSample';
 
   @override
@@ -13,8 +12,7 @@ class AnimatedSwitcherSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   用来在切换子widget的时候实现过渡动画的widget。
   通过transitionBuilder: (Widget child, Animation<double> animation)参数，
   新出现的widget会用animation(其实就是from 0 to 1.0的animationController)实现动画，
@@ -29,8 +27,7 @@ class AnimatedSwitcherSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   new AnimatedSwitcher(
     duration: const Duration(milliseconds: 500),
     transitionBuilder: (Widget child, Animation<double> animation) {
@@ -75,7 +72,7 @@ class _SampleState extends State<_Sample> {
       ],
     );
   }
-  
+
   Widget _buildWidget(int count) {
     count %= 3;
     switch (count) {

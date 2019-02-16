@@ -3,15 +3,13 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedCrossFadeSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedCrossFadeSample';
 
   @override
   String get title => routeName;
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
 一个 widget，可以淡入淡出两个子widget（只能是两个），换句话说是隐式动画的渐入渐出过渡动画。
 
 通过给crossFadeState属性赋值CrossFadeState.showFirst 或 CrossFadeState.showSecond来决定动画显示哪一个widget，
@@ -22,8 +20,7 @@ class AnimatedCrossFadeSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   AnimatedCrossFade(
     duration: Duration(seconds: 2),
     firstChild: FlutterLogo(size: 100.0),
@@ -42,7 +39,6 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   bool isFirst = true;
 
   void _change() {
@@ -55,24 +51,30 @@ class _SampleState extends State<_Sample> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Text('下面显示宽高相同的过渡',textAlign: TextAlign.center),
+        Text('下面显示宽高相同的过渡', textAlign: TextAlign.center),
         AnimatedCrossFade(
           duration: const Duration(seconds: 2),
-          firstChild: const FlutterLogo(style: FlutterLogoStyle.horizontal, size: 100.0),
-          secondChild: const FlutterLogo(style: FlutterLogoStyle.stacked, size: 100.0),
-          crossFadeState: isFirst ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+          firstChild: const FlutterLogo(
+              style: FlutterLogoStyle.horizontal, size: 100.0),
+          secondChild:
+              const FlutterLogo(style: FlutterLogoStyle.stacked, size: 100.0),
+          crossFadeState:
+              isFirst ? CrossFadeState.showFirst : CrossFadeState.showSecond,
         ),
         Divider(),
-        Text('下面显示宽高不相同的过渡',textAlign: TextAlign.center),
+        Text('下面显示宽高不相同的过渡', textAlign: TextAlign.center),
         AnimatedCrossFade(
           duration: const Duration(seconds: 2),
-          firstChild: const FlutterLogo(style: FlutterLogoStyle.horizontal, size: 150.0),
-          secondChild: const FlutterLogo(style: FlutterLogoStyle.stacked, size: 50.0),
-          crossFadeState: isFirst ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+          firstChild: const FlutterLogo(
+              style: FlutterLogoStyle.horizontal, size: 150.0),
+          secondChild:
+              const FlutterLogo(style: FlutterLogoStyle.stacked, size: 50.0),
+          crossFadeState:
+              isFirst ? CrossFadeState.showFirst : CrossFadeState.showSecond,
         ),
         RaisedButton(
             child: Text('点击切换动画'),
-            onPressed: (){
+            onPressed: () {
               _change();
             }),
       ],

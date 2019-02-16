@@ -3,7 +3,6 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedPositionedDirectionalSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedPositionedDirectionalSample';
 
   @override
@@ -13,8 +12,7 @@ class AnimatedPositionedDirectionalSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   PositionedDirectional widget 的动画版本，需要是 Stack widget 的直接子 widget，
   
   PositionedDirectional和Positioned的差别在于前者用start和end适配了rtl和ltr两种方向的布局，
@@ -32,8 +30,7 @@ class AnimatedPositionedDirectionalSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Stack(
     children: <Widget>[
       AnimatedPositionedDirectional(
@@ -55,12 +52,10 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   double _start = 0.0;
   double _top = 0.0;
   double _height = 80.0;
   double _width = 80.0;
-
 
   void _change() {
     setState(() {
@@ -74,7 +69,6 @@ class _SampleState extends State<_Sample> {
         _top = 0.0;
         _height = 80.0;
         _width = 80.0;
-
       }
     });
   }
@@ -101,7 +95,7 @@ class _SampleState extends State<_Sample> {
         SizedBox(height: 20.0),
         RaisedButton(
             child: Text('点击切换动画'),
-            onPressed: (){
+            onPressed: () {
               _change();
             }),
       ],

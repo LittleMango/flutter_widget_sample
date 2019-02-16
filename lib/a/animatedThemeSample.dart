@@ -35,25 +35,25 @@ class _AnimatedThemeSampleState extends State<AnimatedThemeSample> {
   @override
   Widget build(BuildContext context) {
     return AnimatedTheme(
-        data: _data,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(AnimatedThemeSample.routeName),
+      data: _data,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(AnimatedThemeSample.routeName),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              RaisedButton(
+                  child: Text('点击更换主题'),
+                  onPressed: () {
+                    _change();
+                  }),
+              SizedBox(height: 20.0),
+              Text(desc),
+            ],
           ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                RaisedButton(
-                    child: Text('点击更换主题'),
-                    onPressed: () {
-                      _change();
-                    }),
-                SizedBox(height: 20.0),
-                Text(desc),
-              ],
-            ),
-          ),
+        ),
       ),
     );
   }

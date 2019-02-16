@@ -1,24 +1,21 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
+// ignore: must_be_immutable
 class AnimatedContainerSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedContainerSample';
 
   @override
   String get title => routeName;
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Container的隐式动画版本，
   通过给AnimatedContainer设置时间和插值器之后，当其属性发生变化的时候，会自动动画过度。
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   AnimatedContainer(
     duration: const Duration(seconds: 1),
     height: height,
@@ -38,21 +35,21 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   Color bgColor = Colors.red;
   double height = 200.0;
   bool toggle = false;
+
   void _change() {
-      setState(() {
-        if (toggle) {
-          bgColor = Colors.red;
-          height = 200.0;
-        } else {
-          bgColor = Colors.green;
-          height = 100.0;
-        }
-        toggle = !toggle;
-      });
+    setState(() {
+      if (toggle) {
+        bgColor = Colors.red;
+        height = 200.0;
+      } else {
+        bgColor = Colors.green;
+        height = 100.0;
+      }
+      toggle = !toggle;
+    });
   }
 
   @override
@@ -60,7 +57,7 @@ class _SampleState extends State<_Sample> {
     return Column(
       children: <Widget>[
         AnimatedContainer(
-            duration: const Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           height: height,
           foregroundDecoration: BoxDecoration(
             color: bgColor,

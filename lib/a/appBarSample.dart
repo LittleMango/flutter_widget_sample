@@ -6,46 +6,46 @@ class AppBarSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: new Icon(Icons.menu),
-            tooltip: 'menu',
-            onPressed: _restitchDress,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: new Icon(Icons.menu),
+          tooltip: 'menu',
+          onPressed: _restitchDress,
+        ),
+        title: new Text('AppBarSample'),
+        flexibleSpace: Image.asset(
+          'images/img.jpeg',
+          fit: BoxFit.fill,
+        ),
+        bottom: PreferredSize(
+          child: Text('Bottom',
+              style: TextStyle(color: Colors.white, fontSize: 18.0)),
+          preferredSize: Size.fromHeight(50.0),
+        ),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.playlist_play),
+            tooltip: 'Air it',
+            onPressed: _airDress,
           ),
-          title: new Text('AppBarSample'),
-          flexibleSpace: Image.asset(
-            'images/img.jpeg',
-            fit: BoxFit.fill,
+          new IconButton(
+            icon: new Icon(Icons.playlist_add_check),
+            tooltip: 'Repair it',
+            onPressed: _repairDress,
           ),
-          bottom: PreferredSize(
-            child: Text('Bottom',
-                style: TextStyle(color: Colors.white, fontSize: 18.0)),
-            preferredSize: Size.fromHeight(50.0),
-          ),
-          actions: <Widget>[
-            new IconButton(
-              icon: new Icon(Icons.playlist_play),
-              tooltip: 'Air it',
-              onPressed: _airDress,
+        ],
+      ),
+      body: Center(
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: Text(_appBarExplain),
             ),
-            new IconButton(
-              icon: new Icon(Icons.playlist_add_check),
-              tooltip: 'Repair it',
-              onPressed: _repairDress,
-            ),
+            Image.asset('images/appbar_sample.png'),
           ],
         ),
-        body: Center(
-          child: ListView(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0),
-                child: Text(_appBarExplain),
-              ),
-              Image.asset('images/appbar_sample.png'),
-            ],
-          ),
-        ),
+      ),
     );
   }
 

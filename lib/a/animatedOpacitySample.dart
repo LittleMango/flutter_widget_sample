@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedOpacitySample extends BaseContentApp {
-
   static const String routeName = 'AnimatedOpacitySample';
 
   @override
@@ -14,15 +12,13 @@ class AnimatedOpacitySample extends BaseContentApp {
   Widget get contentWidget => LogoFade();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Opacity widget的隐式动画版本，
   动画不透明度相对昂贵，因为它需要将子画面绘制到中间缓冲区中。
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   new AnimatedOpacity(
     opacity: opacityLevel,
     duration: new Duration(seconds: 1),

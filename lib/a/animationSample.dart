@@ -1,18 +1,15 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
+// ignore: must_be_immutable
 class AnimationSample extends BaseContentApp {
-
   static const String routeName = 'AnimationSample';
 
   @override
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Animation对象是Flutter动画库中的一个核心类，它生成指导动画的值。
   所以 Animation 及其子类只是记录动画值的一个载体对象，
   Animation 只是一个抽象类，我们使用的时候一般是使用其子类，最常见的就是 Tween，补间动画，
@@ -26,8 +23,7 @@ class AnimationSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
     controller = new AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     animation = BorderRadiusTween(
@@ -50,10 +46,8 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController controller;
   Animation<BorderRadius> animation;
-
 
   @override
   void initState() {
@@ -61,13 +55,13 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
     controller = new AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     animation = BorderRadiusTween(
-        begin: BorderRadius.zero,
-        end: BorderRadius.only(
-            topLeft: Radius.circular(50.0),
-            topRight: Radius.zero,
-            bottomLeft: Radius.zero,
-            bottomRight: Radius.circular(50.0))
-    ).animate(controller);
+            begin: BorderRadius.zero,
+            end: BorderRadius.only(
+                topLeft: Radius.circular(50.0),
+                topRight: Radius.zero,
+                bottomLeft: Radius.zero,
+                bottomRight: Radius.circular(50.0)))
+        .animate(controller);
     controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         controller.reverse();
@@ -75,7 +69,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
         controller.forward();
       }
     });
-    controller.addListener((){
+    controller.addListener(() {
       setState(() {
         //触发 Widget 重新执行 build
         //或者可以让需要发生动画的 Widget 继承自 AnimationWidget
@@ -92,7 +86,6 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: <Widget>[
         Text('下面我们以BorderRadiusTween为例子，来看看如何实现一个圆角渐变的动画'),
@@ -114,8 +107,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
   }
 }
 
-String _explain =
-'''
+String _explain = '''
 如何知道怎么使用BorderRadiusTween？
 
 1. Ctrl/cmd 点击BorderRadiusTween，查看文档，可以看到它指向BorderRadius

@@ -3,7 +3,6 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimationControllerSample extends BaseContentApp {
-
   static const String routeName = 'AnimationControllerSample';
 
   @override
@@ -13,8 +12,7 @@ class AnimationControllerSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
 此类允许您执行以下任务：
 
 向前或向后播放动画，或停止动画。
@@ -32,8 +30,7 @@ AnimationController需要一个TickerProvider，一般是在State<StatefulWiget>
       ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   AnimationController _controller = AnimationController(vsync: this, duration: const Duration(seconds: 2));
   
   @override
@@ -52,7 +49,6 @@ AnimationController需要一个TickerProvider，一般是在State<StatefulWiget>
   ),
   
   ''';
-
 }
 
 class _Sample extends StatefulWidget {
@@ -61,23 +57,22 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with TickerProviderStateMixin {
-
   AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: const Duration(seconds: 2))
-    ..addStatusListener((status){
-      if (status == AnimationStatus.dismissed) {
-        _controller.forward();
-      } else if (status == AnimationStatus.completed) {
-        _controller.reverse();
-      }
-    });
+    _controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 2))
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.dismissed) {
+              _controller.forward();
+            } else if (status == AnimationStatus.completed) {
+              _controller.reverse();
+            }
+          });
     _controller.forward();
   }
-
 
   @override
   void dispose() {
@@ -91,11 +86,11 @@ class _SampleState extends State<_Sample> with TickerProviderStateMixin {
       children: <Widget>[
         FadeTransition(
           opacity: _controller,
-            child: Container(
-              height: 150.0,
-              width: 150.0,
-              color: Colors.amberAccent,
-            ),
+          child: Container(
+            height: 150.0,
+            width: 150.0,
+            color: Colors.amberAccent,
+          ),
         ),
         SizedBox(height: 20.0),
       ],

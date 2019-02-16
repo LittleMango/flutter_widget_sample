@@ -1,9 +1,9 @@
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
+// ignore: must_be_immutable
 class AlertDialogSample extends BaseBtnApp {
   static const String routeName = 'AlertDialogSample';
 
@@ -12,36 +12,35 @@ class AlertDialogSample extends BaseBtnApp {
 
   @override
   VoidCallback get callBack => () {
-    showDialog<Null>(
-      context: context,
-      barrierDismissible: false, // 点击 AlertDialog 外面不消失
-      builder: (BuildContext context) {
-        return new AlertDialog(
-          title: new Text('Rewind and remember'),
-          content: new SingleChildScrollView(
-            child: new ListBody(
-              children: <Widget>[
-                new Text('You will never be satisfied.'),
-                new Text('You\’re like me. I’m never satisfied.'),
+        showDialog<Null>(
+          context: context,
+          barrierDismissible: false, // 点击 AlertDialog 外面不消失
+          builder: (BuildContext context) {
+            return new AlertDialog(
+              title: new Text('Rewind and remember'),
+              content: new SingleChildScrollView(
+                child: new ListBody(
+                  children: <Widget>[
+                    new Text('You will never be satisfied.'),
+                    new Text('You\’re like me. I’m never satisfied.'),
+                  ],
+                ),
+              ),
+              actions: <Widget>[
+                new FlatButton(
+                  child: new Text('Regret'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
               ],
-            ),
-          ),
-          actions: <Widget>[
-            new FlatButton(
-              child: new Text('Regret'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
+            );
+          },
         );
-      },
-    );
-  };
+      };
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
 material样式的警报对话框。
 
 警报对话框会通知用户需要确认的情况。警报对话框具有可选标题和可选的操作列表。标题显示在内容上方，操作显示在内容下方。
@@ -54,8 +53,7 @@ material样式的警报对话框。
       ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   showDialog<Null>(
       context: context,
       barrierDismissible: false, // 点击 AlertDialog 外面不消失
@@ -85,5 +83,4 @@ material样式的警报对话框。
 
   @override
   String get title => routeName;
-
 }

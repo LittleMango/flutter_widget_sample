@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
-
+// ignore: must_be_immutable
 class AlignSample extends BaseContentApp {
-
   static const String routeName = 'AlignSample';
+
   @override
   Widget get contentWidget => Column(
-    children: <Widget>[
-      Text('效果如下'),
-      Divider(),
-      Align(
-        alignment: Alignment.centerLeft,
-        child: Text('居中左对齐'),
-      ),
-      Divider(),
-      Align(
-        heightFactor: 3.0,
-        alignment: Alignment.center,
-        child: Text('居中，且高度尺寸因子为3.0，即高度是子控件的3倍'),
-      ),
-      Divider(),
-    ],
-  );
+        children: <Widget>[
+          Text('效果如下'),
+          Divider(),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text('居中左对齐'),
+          ),
+          Divider(),
+          Align(
+            heightFactor: 3.0,
+            alignment: Alignment.center,
+            child: Text('居中，且高度尺寸因子为3.0，即高度是子控件的3倍'),
+          ),
+          Divider(),
+        ],
+      );
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
 一个widget，用于将其子widget与其自身对齐，并根据子widget的大小自行调整大小。
 
 例如，要对齐右下方，则使用Alignment.bottomRight。
@@ -39,8 +38,7 @@ class AlignSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   Column(
     children: <Widget>[
       Align(

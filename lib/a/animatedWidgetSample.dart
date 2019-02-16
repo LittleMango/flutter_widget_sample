@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
-
 // ignore: must_be_immutable
 class AnimatedWidgetSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedWidgetSample';
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
 AnimatedWidget是一个抽象类。
 
 AnimatedWidget是最常见的使用动画对象，且可以监听动画生命周期和属性，比如使用 ChangeNotifier和ValueNotifier。
@@ -24,8 +21,7 @@ AnimatedBuilder、AnimatedModalBarrier、DecoratedBoxTransition、FadeTransition
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
 class _AlignTransitWidget extends AnimatedWidget {
 
   Animation<AlignmentGeometry> animation;
@@ -50,13 +46,11 @@ class _AlignTransitWidget extends AnimatedWidget {
 }
 
 class _Sample extends StatefulWidget {
-
   @override
   _SampleState createState() => _SampleState();
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController controller;
   Animation<AlignmentGeometry> alignment;
 
@@ -65,7 +59,9 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
     super.initState();
     controller = new AnimationController(
         duration: const Duration(milliseconds: 3000), vsync: this);
-    alignment = AlignmentGeometryTween(begin: Alignment.bottomLeft, end: Alignment.topRight).animate(controller);
+    alignment = AlignmentGeometryTween(
+            begin: Alignment.bottomLeft, end: Alignment.topRight)
+        .animate(controller);
     controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         controller.reverse();
@@ -90,9 +86,10 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
 
 // ignore: must_be_immutable
 class _AlignTransitWidget extends AnimatedWidget {
-
   Animation<AlignmentGeometry> animation;
-  _AlignTransitWidget({Key key, this.animation}) : super(key: key, listenable: animation);
+
+  _AlignTransitWidget({Key key, this.animation})
+      : super(key: key, listenable: animation);
 
   @override
   Widget build(BuildContext context) {

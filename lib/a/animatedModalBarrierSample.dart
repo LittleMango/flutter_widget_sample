@@ -3,22 +3,19 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedModalBarrierSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedModalBarrierSample';
 
   @override
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   动画版本的ModalBarrier，用来做半透明遮罩，防止用户点击遮罩下面的 widget，
   比如常用在对话框出现的时候。
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   child: AnimatedModalBarrier(
     color: color,
     dismissible: false,
@@ -27,7 +24,6 @@ class AnimatedModalBarrierSample extends BaseContentApp {
 
   @override
   String get title => routeName;
-
 }
 
 class _Sample extends StatefulWidget {
@@ -36,7 +32,6 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController controller;
   Animation<Color> color;
   bool visible = false;
@@ -44,8 +39,10 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    controller = new AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    color = new ColorTween(begin: Colors.transparent, end: Colors.black38).animate(controller);
+    controller = new AnimationController(
+        vsync: this, duration: const Duration(seconds: 1));
+    color = new ColorTween(begin: Colors.transparent, end: Colors.black38)
+        .animate(controller);
     controller.addStatusListener((status) {
       if (status == AnimationStatus.dismissed) {
         setState(() {

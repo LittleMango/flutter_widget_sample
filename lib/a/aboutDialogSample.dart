@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
+// ignore: must_be_immutable
 class AboutDialogSample extends BaseBtnApp {
-
   static const String routeName = 'AboutDialogSample';
 
   @override
@@ -36,15 +36,15 @@ class AboutDialogSample extends BaseBtnApp {
 
   @override
   VoidCallback get callBack => () {
-    showAboutDialog(
-      context: context,
-      applicationName: 'Flutter Sample',
-      applicationVersion: '1.0',
-      applicationIcon: Icon(Icons.home),
-      applicationLegalese: '版权说明',
-      children: <Widget>[
-        Text('自定义子控件'),
-      ],
-    );
-  };
+        showAboutDialog(
+          context: context,
+          applicationName: 'Flutter Sample',
+          applicationVersion: '1.0',
+          applicationIcon: Icon(Icons.home),
+          applicationLegalese: '版权说明',
+          children: <Widget>[
+            Text('自定义子控件'),
+          ],
+        );
+      };
 }

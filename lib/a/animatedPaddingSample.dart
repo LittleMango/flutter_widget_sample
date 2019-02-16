@@ -3,7 +3,6 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedPaddingSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedPaddingSample';
 
   @override
@@ -13,21 +12,18 @@ class AnimatedPaddingSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Padding widget的隐式动画版本.
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
       AnimatedPadding(
         padding: EdgeInsets.symmetric(horizontal: _padding),
         child: Text('示例文本信息'),
         duration: const Duration(seconds: 1)
       ),
       ''';
-
 }
 
 class _Sample extends StatefulWidget {
@@ -36,7 +32,6 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   double _padding = 0.0;
 
   void _change() {
@@ -54,14 +49,13 @@ class _SampleState extends State<_Sample> {
     return Column(
       children: <Widget>[
         AnimatedPadding(
-          padding: EdgeInsets.symmetric(horizontal: _padding),
+            padding: EdgeInsets.symmetric(horizontal: _padding),
             child: Text('示例文本信息示例文本信息示例文本信息示例文本信息示例文本信息'),
-            duration: const Duration(seconds: 1)
-        ),
+            duration: const Duration(seconds: 1)),
         SizedBox(height: 20.0),
         RaisedButton(
             child: Text('点击切换动画'),
-            onPressed: (){
+            onPressed: () {
               _change();
             }),
       ],

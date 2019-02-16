@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
+// ignore: must_be_immutable
 class AnimatedBuilderSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedBuilderSample';
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   当 widget 的动画逻辑比较复杂的时候考虑使用AnimatedBuilder来分离动画逻辑，
   如果动画逻辑简单，则使用 AnimatedWidget 及其子类实现。
   
@@ -22,8 +21,7 @@ class AnimatedBuilderSample extends BaseContentApp {
   Widget get contentWidget => Spinner();
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   new AnimatedBuilder(
     animation: _controller,
     child: new Container(width: 200.0, height: 200.0, color: Colors.green),
@@ -67,7 +65,7 @@ class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
       child: Container(height: 100.0, color: Colors.green),
       builder: (BuildContext context, Widget child) {
         return Transform.scale(
-          scale: _controller.value ,
+          scale: _controller.value,
           child: child,
         );
       },

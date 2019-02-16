@@ -35,8 +35,7 @@ widget首先尝试布局约束允许的最大宽度。widget的高度通过将�
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Container(
     height: 100.0,//注意设置的是AspectRatio的父Widget
     child: AspectRatio(
@@ -80,11 +79,12 @@ class _Sample extends StatelessWidget {
           height: 100.0,
           width: 280.0,
           child: AspectRatio(
-              aspectRatio: 2.0,
+            aspectRatio: 2.0,
             child: Container(
               color: Colors.amber,
               child: Center(
-                child: Text('手动设置AspectRatio的宽度为280,宽度为100，宽高比为2:1,经过上述的第一第二点无法找到满足比例的宽高，所以最终结果是满足了父widget 的宽高约束，而不满足比例'),
+                child: Text(
+                    '手动设置AspectRatio的宽度为280,宽度为100，宽高比为2:1,经过上述的第一第二点无法找到满足比例的宽高，所以最终结果是满足了父widget 的宽高约束，而不满足比例'),
               ),
             ),
           ),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class AssetImageSample extends BaseContentApp {
-
   static const String routeName = 'AssetImageSample';
 
   @override
@@ -13,8 +12,7 @@ class AssetImageSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   AssetImage用来加载本地 assets 中的图片资源，该类可以根据不同的屏幕分辨率加载最适合当前设备分辨率的图片。
   为了给不同分辨率的设备支持最适合的图片，请在本地 assets 的图片目录下新增图片变体路径，
   格式为 Nx/形式命名的子目录，例如：
@@ -27,8 +25,7 @@ class AssetImageSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   //由于当前测试的设备是2.0密度的，所以加载的是 images/2.0x/img.jpeg
   Image(image: AssetImage('images/img.jpeg'));
   ''';

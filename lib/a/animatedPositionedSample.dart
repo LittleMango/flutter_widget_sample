@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_demo/base.dart';
 
-
 // ignore: must_be_immutable
 class AnimatedPositionedSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedPositionedSample';
 
   @override
@@ -14,8 +12,7 @@ class AnimatedPositionedSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Positioned widget 的隐式动画版本，需要是 Stack widget 的直接子 widget，
   可以控制 left top right bottom width height，
   
@@ -29,8 +26,7 @@ class AnimatedPositionedSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Stack(
     children: <Widget>[
       AnimatedPositioned(
@@ -50,12 +46,10 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   double _left = 0.0;
   double _top = 0.0;
   double _height = 80.0;
   double _width = 80.0;
-
 
   void _change() {
     setState(() {
@@ -69,7 +63,6 @@ class _SampleState extends State<_Sample> {
         _top = 0.0;
         _height = 80.0;
         _width = 80.0;
-
       }
     });
   }
@@ -96,7 +89,7 @@ class _SampleState extends State<_Sample> {
         SizedBox(height: 20.0),
         RaisedButton(
             child: Text('点击切换动画'),
-            onPressed: (){
+            onPressed: () {
               _change();
             }),
       ],
