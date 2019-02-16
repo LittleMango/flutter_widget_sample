@@ -3,18 +3,16 @@ import 'package:flutter_ui_demo/base.dart';
 
 // ignore: must_be_immutable
 class AnimatedPhysicalModelSample extends BaseContentApp {
-
   static const String routeName = 'AnimatedPhysicalModelModel';
 
   @override
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   PhysicalModel的隐式动画版本，可以用来控制圆角、阴影、elevation，以及形状(圆形或者矩形)等 material 属性。
   
-  PhysicalModel会自动裁剪子 widget，而 Container 是不会的
+  PhysicalModel会自动裁剪子 widget(现在需要设置clipBehavior)，而 Container 是不会的
   
   所以当需要圆角矩形的图片时，可以考虑使用PhysicalModel或其动画版本。
   
@@ -24,14 +22,14 @@ class AnimatedPhysicalModelSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   AnimatedPhysicalModel(
     duration: const Duration(seconds: 1),
     shape: _shape,
     elevation: _elevation,
     color: _color,
     shadowColor: _shadowColor,
+    clipBehavior: Clip.antiAlias,
     borderRadius: BorderRadius.all(Radius.circular(_borderRadius)),
     child: new Container(
       width: 100.0,
@@ -43,7 +41,6 @@ class AnimatedPhysicalModelSample extends BaseContentApp {
 
   @override
   String get title => routeName;
-
 }
 
 class _Sample extends StatefulWidget {
@@ -52,7 +49,6 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   BoxShape _shape = BoxShape.rectangle;
   double _elevation = 4.0;
   double _borderRadius = 0.0;
@@ -72,7 +68,6 @@ class _SampleState extends State<_Sample> {
         _color = Colors.blue;
         _shadowColor = Colors.black12;
       }
-
     });
   }
 
@@ -86,6 +81,7 @@ class _SampleState extends State<_Sample> {
           elevation: _elevation,
           color: _color,
           shadowColor: _shadowColor,
+          clipBehavior: Clip.antiAlias,
           borderRadius: BorderRadius.all(Radius.circular(_borderRadius)),
           child: new Container(
             width: 100.0,
@@ -96,10 +92,9 @@ class _SampleState extends State<_Sample> {
         SizedBox(height: 20.0),
         RaisedButton(
             child: Text('点击切换动画'),
-            onPressed: (){
+            onPressed: () {
               _change();
             }),
-
       ],
     );
   }
