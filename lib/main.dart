@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
         AppBarSample.routeName : (BuildContext context) => new AppBarSample(),
         AspectRatioSample.routeName : (BuildContext context) => new AspectRatioSample(),
         AssetImageSample.routeName : (BuildContext context) => new AssetImageSample(),
+        AlwaysStoppedAnimationSample.routeName : (BuildContext context) => new AlwaysStoppedAnimationSample(),
 
         BackButtonSample.routeName : (BuildContext context) => new BackButtonSample(),
         BackButtonIconSample.routeName : (BuildContext context) => new BackButtonIconSample(),

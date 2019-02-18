@@ -6,6 +6,7 @@ export 'a/alertDialogSample.dart';
 export 'a/alignSample.dart';
 export 'a/alignmentSample.dart';
 export 'a/alignTransitionSample.dart';
+export 'a/alwaysStoppedAnimationSample.dart';
 export 'a/animationSample.dart';
 export 'a/animatedAlignSample.dart';
 export 'a/animatedWidgetSample.dart';

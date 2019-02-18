@@ -66,6 +66,7 @@ List<String> getSamples() {
   list.add(AppBarSample.routeName);
   list.add(AspectRatioSample.routeName);
   list.add(AssetImageSample.routeName);
+  list.add(AlwaysStoppedAnimationSample.routeName);
 
   list.add(BackButtonSample.routeName);
   list.add(BackButtonIconSample.routeName);
