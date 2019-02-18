@@ -1,6 +1,6 @@
 import 'package:flutter_ui_demo/base.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui show Image, ImageFilter;
+import 'dart:ui' as ui show ImageFilter;
 
 // ignore: must_be_immutable
 class BackdropFilterSample extends BaseContentApp {
@@ -72,7 +72,7 @@ class _Sample extends StatelessWidget {
                     width: 100.0,
                     height: 100.0,
                     decoration: new BoxDecoration(
-                        color: Colors.grey.shade200.withOpacity(0.5)),
+                        color: Colors.red.shade200.withOpacity(0.5)),
                     child: Text('毛玻璃'),
                   ),
                 ),

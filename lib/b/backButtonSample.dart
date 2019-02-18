@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BackButtonSample extends BaseContentApp {
-
   static const String routeName = 'BackButtonSample';
 
   @override
@@ -13,8 +12,7 @@ class BackButtonSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   一个返回上一个界面的按钮，自动适配 iOS 和 Android 的图标风格。点击的时候自动 pop。
   
   是IconButton与BackButtonIcon的结合体。

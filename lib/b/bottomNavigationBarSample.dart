@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigationBarSample extends StatelessWidget {
-
   static const String routeName = 'BottomNavigationBarSample';
 
   @override
   Widget build(BuildContext context) {
     return _Sample();
   }
-
 }
 
 class _Sample extends StatefulWidget {
@@ -17,11 +15,9 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   int _selectIndex = 0;
 
-  String get des =>
-      '''
+  String get des => '''
   显示在应用程序底部的material widget，用于在少量视图中进行选择，通常在3到5之间。
   
   其中每一个 item 由文本标签，图标或两者结合的形式组成，它提供了应用程序顶级视图之间的快速导航。对于较大的屏幕，侧面导航可能更适合。
@@ -61,10 +57,13 @@ class _SampleState extends State<_Sample> {
       bottomNavigationBar: new BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.build), title: Text('build')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.build), title: Text('build')),
           BottomNavigationBarItem(icon: Icon(Icons.star), title: Text('star')),
-          BottomNavigationBarItem(icon: Icon(Icons.satellite), title: Text('satellite')),
-          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), title: Text('ac_unit')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.satellite), title: Text('satellite')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.ac_unit), title: Text('ac_unit')),
         ],
         currentIndex: _selectIndex,
         onTap: (index) {

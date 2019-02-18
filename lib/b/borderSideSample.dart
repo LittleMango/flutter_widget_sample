@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BorderSideSample extends BaseContentApp {
-
   static const String routeName = 'BorderSideSample';
 
   @override
@@ -13,15 +12,13 @@ class BorderSideSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Border 是由四条边组成的，这四条边的类型就是BorderSide，
   可以设置宽度和颜色
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   border: const Border(
     top: const BorderSide(width: 1.0, color: Colors.blueAccent),
     left: const BorderSide(width: 1.0, color: Colors.amber),
@@ -45,7 +42,8 @@ class _Sample extends StatelessWidget {
                 top: const BorderSide(width: 1.0, color: Colors.blueAccent),
                 left: const BorderSide(width: 1.0, color: Colors.amber),
                 right: const BorderSide(width: 1.0, color: Colors.redAccent),
-                bottom: const BorderSide(width: 1.0, color: Colors.deepPurpleAccent),
+                bottom: const BorderSide(
+                    width: 1.0, color: Colors.deepPurpleAccent),
               ),
             ),
           ),

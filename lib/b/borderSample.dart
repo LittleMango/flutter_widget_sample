@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BorderSample extends BaseContentApp {
-
   static const String routeName = 'BorderSample';
 
   @override
@@ -13,16 +12,14 @@ class BorderSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   盒子的边框，由四个边组成：顶部，右侧，底部，左侧。
 
   边由BorderSide对象表示。
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Container(
     width: 100.0,
     height: 100.0,
@@ -31,7 +28,6 @@ class BorderSample extends BaseContentApp {
     ),
   ),
   ''';
-
 }
 
 class _Sample extends StatelessWidget {
@@ -48,7 +44,8 @@ class _Sample extends StatelessWidget {
                 top: const BorderSide(width: 1.0, color: Colors.blueAccent),
                 left: const BorderSide(width: 1.0, color: Colors.amber),
                 right: const BorderSide(width: 1.0, color: Colors.redAccent),
-                bottom: const BorderSide(width: 1.0, color: Colors.deepPurpleAccent),
+                bottom: const BorderSide(
+                    width: 1.0, color: Colors.deepPurpleAccent),
               ),
             ),
           ),
@@ -57,7 +54,7 @@ class _Sample extends StatelessWidget {
             width: 100.0,
             height: 100.0,
             decoration: BoxDecoration(
-              border:Border.all(width: 2.0, color:Colors.redAccent),
+              border: Border.all(width: 2.0, color: Colors.redAccent),
             ),
           ),
         ],

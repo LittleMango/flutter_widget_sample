@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BoxConstraintsSample extends BaseContentApp {
-
   static const String routeName = 'BoxConstraintsSample';
 
   @override
@@ -13,8 +12,7 @@ class BoxConstraintsSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   BoxConstraints用来给 widget 增加宽高约束。
   
   loose：表示最大尺寸，如果实际尺寸小于 loose 设置的尺寸，则最终采用实际尺寸，否则采用 loose 的尺寸。如示例一：
@@ -31,13 +29,11 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-
         Text('height = 50'),
         Text('width = 50'),
         Text('constraints: BoxConstraints.loose(Size(100.0, 100.0)),'),
@@ -49,8 +45,9 @@ class _SampleState extends State<_Sample> {
           color: Colors.redAccent,
           child: Text('宽高50'),
         ),
-        SizedBox(height: 50.0,),
-
+        SizedBox(
+          height: 50.0,
+        ),
         Text('tight: widget 的最终尺寸和约束设置的一致，不管 widget 本身是否设置有宽高'),
         Text('height = 50'),
         Text('width = 50'),
@@ -64,8 +61,9 @@ class _SampleState extends State<_Sample> {
           color: Colors.redAccent,
           child: Text('宽高100'),
         ),
-        SizedBox(height: 50.0,),
-
+        SizedBox(
+          height: 50.0,
+        ),
         Text('expand: 让 widget 填充满父widget 所有可用空间'),
         Text('如果在BoxConstraints.expand()中指定了宽高，则会扩充到指定的宽高'),
         Text('如果不指定扩充的大小，然后父widget 在这个轴上面的尺寸是无限大的，那么约束会失败，导致看不出任何效果'),
@@ -77,8 +75,9 @@ class _SampleState extends State<_Sample> {
           color: Colors.redAccent,
           child: Text('高100'),
         ),
-        SizedBox(height: 50.0,),
-
+        SizedBox(
+          height: 50.0,
+        ),
         Text('minHeight, minWidth, maxHeight, maxWidth'),
         Text('这四个属性的作用就不解释了，最终只要设置的数值在最大和最小之间，那么结果就是取widget 设置的数值'),
         Text('否则超过最大限制则取最大值，超过最小限制，则取最小值'),
@@ -89,11 +88,17 @@ class _SampleState extends State<_Sample> {
         Container(
           height: 50.0,
           width: 50.0,
-          constraints: BoxConstraints(minHeight: 10.0, minWidth: 10.0, maxHeight: 100.0, maxWidth: 100.0),
+          constraints: BoxConstraints(
+              minHeight: 10.0,
+              minWidth: 10.0,
+              maxHeight: 100.0,
+              maxWidth: 100.0),
           color: Colors.redAccent,
           child: Text('宽高50'),
         ),
-        SizedBox(height: 50.0,),
+        SizedBox(
+          height: 50.0,
+        ),
       ],
     );
   }

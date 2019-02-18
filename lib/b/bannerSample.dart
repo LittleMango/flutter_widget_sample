@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BannerSample extends BaseContentApp {
-
   static const String routeName = 'BannerSample';
 
   @override
@@ -13,8 +12,7 @@ class BannerSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   在另一个小部件的角落上方显示对角线消息。
   可以设置Banner所在位置，可以设置到四个角落，还可以设置背景颜色，文字方向，和文字样式。
   
@@ -26,8 +24,7 @@ class BannerSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Banner(
     message: 'Banner',
     location: BannerLocation.topEnd,

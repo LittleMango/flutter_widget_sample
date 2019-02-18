@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BeveledRectangleBorderSample extends BaseContentApp {
-
   static const String routeName = 'BeveledRectangleBorderSample';
 
   @override
@@ -13,8 +12,7 @@ class BeveledRectangleBorderSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   类似圆角矩形RoundedRectangleBorder，不过这个是斜角矩形，
   具体效果可以操作下面的slider查看。
   
@@ -23,8 +21,7 @@ class BeveledRectangleBorderSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Material(
     color: Colors.redAccent,
     shape: new BeveledRectangleBorder(
@@ -40,7 +37,6 @@ class BeveledRectangleBorderSample extends BaseContentApp {
     ),
   );
   ''';
-
 }
 
 class _Sample extends StatefulWidget {
@@ -49,7 +45,6 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   double _value = 0.0;
 
   void _change(double value) {
@@ -70,21 +65,27 @@ class _SampleState extends State<_Sample> {
                 width: 1.0,
                 style: BorderStyle.none,
               ),
-              borderRadius:new BorderRadius.circular(_value),
+              borderRadius: new BorderRadius.circular(_value),
             ),
+            clipBehavior: Clip.antiAlias,
             child: new Container(
               padding: const EdgeInsets.all(10.0),
-              child: new Text('展示文本信息', style: Theme.of(context).textTheme.display2,),
+              child: new Text(
+                '展示文本信息',
+                style: Theme.of(context).textTheme.display2,
+              ),
             ),
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(
+            height: 20.0,
+          ),
           Slider(
-              value: _value,
-              min: 0.0,
-              max: 300.0,
-              onChanged: (value){
-                _change(value);
-              },
+            value: _value,
+            min: 0.0,
+            max: 300.0,
+            onChanged: (value) {
+              _change(value);
+            },
           )
         ],
       ),

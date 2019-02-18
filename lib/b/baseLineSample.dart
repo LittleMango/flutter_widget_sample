@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BaselineSample extends BaseContentApp {
-
   static const String routeName = 'BaselineSample';
 
   @override
@@ -13,8 +12,7 @@ class BaselineSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   baseline是一个widget，用来设置子widget的基线位置，如果子widget没有基线，则默认底部为基线。
   作用用来美化一组排列的widget，让其看上去更加顺眼。。。
   
@@ -26,8 +24,7 @@ class BaselineSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Column(
     children: <Widget>[
       Row(
@@ -67,16 +64,17 @@ class _Sample extends StatelessWidget {
             Baseline(
               baseline: 70.0,
               baselineType: TextBaseline.alphabetic,
-              child: Text('jKf',
-                  style: Theme.of(context).textTheme.display2,
+              child: Text(
+                'jKf',
+                style: Theme.of(context).textTheme.display2,
               ),
             ),
-            Text('jKf',
-              style: Theme.of(context).textTheme.display2),
+            Text('jKf', style: Theme.of(context).textTheme.display2),
             Baseline(
               baseline: 70.0,
               baselineType: TextBaseline.alphabetic,
-              child: Text('jKf',
+              child: Text(
+                'jKf',
                 style: Theme.of(context).textTheme.display2,
               ),
             ),

@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 class BottomSheetSample extends StatelessWidget {
-
   static const String routeName = 'BottomSheetSample';
 
-  String get des1 =>
-      '''
+  String get des1 => '''
   showModalBottomSheet是模态弹出一个 bottomSheet，将会阻止用户与 bottomSheet 背后的主体内容交互，
 
   ''';
 
-  String get des2 =>
-      '''
+  String get des2 => '''
   showBottomSheet的调用是Scaffold.of(context).showBottomSheet(BuildWidget)；
   
   这里需要注意其中的 context 参数，Scaffold.of会通过传入的 context 参数在找到其所代表的 widget，并且在往图层树上方搜索，视图寻找到Scaffold这个 widget，
@@ -36,9 +33,11 @@ class BottomSheetSample extends StatelessWidget {
                 RaisedButton(
                   child: Text('showModalBottomSheet'),
                   onPressed: () {
-                    showModalBottomSheet(context: context, builder: (BuildContext context) {
-                      return Image.asset('images/img.jpeg');
-                    });
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Image.asset('images/img.jpeg');
+                        });
                   },
                 ),
                 SizedBox(

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BoxDecorationSample extends BaseContentApp {
-
   static const String routeName = 'BoxDecorationSample';
 
   @override
@@ -13,17 +12,14 @@ class BoxDecorationSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   BoxDecoration主要是给DecoratedBox、Container做装饰用的，
   可以设置形状(圆角矩形、原形)、边框，
   背景可以设置纯色背景、渐变背景、图片背景、还可以设置阴影
-  
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   Container(
     width: 100.0,
     height: 100.0,
@@ -46,7 +42,6 @@ class BoxDecorationSample extends BaseContentApp {
     ),
   );
   ''';
-
 }
 
 class _Sample extends StatelessWidget {
@@ -93,7 +88,7 @@ class _Sample extends StatelessWidget {
             height: 100.0,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(colors: <Color>[Colors.amber, Colors.white]),
+              gradient: RadialGradient(colors: [Colors.amber, Colors.white]),
             ),
             child: Text('背景渐变'),
           ),
@@ -107,7 +102,10 @@ class _Sample extends StatelessWidget {
                 image: ExactAssetImage('images/img.jpeg'),
               ),
             ),
-            child: Text('背景是图片', style: TextStyle(color: Colors.white),),
+            child: Text(
+              '背景是图片',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
           Container(
             alignment: Alignment.center,
@@ -118,11 +116,10 @@ class _Sample extends StatelessWidget {
               shape: BoxShape.circle,
               boxShadow: <BoxShadow>[
                 BoxShadow(
-                  color: Colors.redAccent,
-                  offset: Offset(0.0, 5.0),
-                  blurRadius: 5.0,
-                  spreadRadius: 10.0
-                ),
+                    color: Colors.redAccent,
+                    offset: Offset(0.0, 5.0),
+                    blurRadius: 5.0,
+                    spreadRadius: 10.0),
                 BoxShadow(
                   color: Colors.black,
                   offset: Offset(0.0, 5.0),

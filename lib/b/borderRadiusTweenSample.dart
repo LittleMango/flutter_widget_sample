@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BorderRadiusTweenSample extends BaseContentApp {
-
   static const String routeName = 'BorderRadiusTweenSample';
 
   @override
@@ -13,18 +12,15 @@ class BorderRadiusTweenSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   对圆角做补间动画。
   
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   _animation = BorderRadiusTween(begin: BorderRadius.all(Radius.circular(0.0)), end: BorderRadius.all(Radius.circular(50.0))).animate(_controller);
   ''';
-
 }
 
 class _Sample extends StatefulWidget {
@@ -33,16 +29,18 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController _controller;
   Animation<BorderRadius> _animation;
-
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: Duration(seconds: 1));
-    _animation = BorderRadiusTween(begin: BorderRadius.all(Radius.circular(0.0)), end: BorderRadius.all(Radius.circular(50.0))).animate(_controller);
+    _controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+    _animation = BorderRadiusTween(
+            begin: BorderRadius.all(Radius.circular(0.0)),
+            end: BorderRadius.all(Radius.circular(50.0)))
+        .animate(_controller);
     _controller.addStatusListener((state) {
       if (state == AnimationStatus.completed) {
         _controller.reverse();
@@ -51,8 +49,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
       }
     });
     _controller.addListener(() {
-      setState(() {
-      });
+      setState(() {});
     });
     _controller.forward();
   }

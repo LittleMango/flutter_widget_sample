@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BorderRadiusDirectionalSample extends BaseContentApp {
-
   static const String routeName = 'BorderRadiusDirectionalSample';
 
   @override
@@ -13,16 +12,14 @@ class BorderRadiusDirectionalSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   请使用BorderRadiusDirectional是适配了语言方向的BorderRadius。
 
   一般在BoxDecoration 中使用，需要设置 shape 为BoxShape.rectangle。
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Container(
     width: 100.0,
     height: 100.0,
@@ -33,7 +30,6 @@ class BorderRadiusDirectionalSample extends BaseContentApp {
     ),
   );
   ''';
-
 }
 
 class _Sample extends StatelessWidget {

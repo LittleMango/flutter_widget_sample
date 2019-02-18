@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BorderRadiusSample extends BaseContentApp {
-
   static const String routeName = 'BorderRadiusSample';
 
   @override
@@ -13,8 +12,7 @@ class BorderRadiusSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   矩形每个角的一组不可变半径。
 
   一般在BoxDecoration 中使用，需要设置 shape 为BoxShape.rectangle。
@@ -26,8 +24,7 @@ class BorderRadiusSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Container(
     width: 100.0,
     height: 100.0,
@@ -38,7 +35,6 @@ class BorderRadiusSample extends BaseContentApp {
     ),
   );
   ''';
-
 }
 
 class _Sample extends StatelessWidget {

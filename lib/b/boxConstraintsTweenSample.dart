@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BoxConstraintsTweenSample extends BaseContentApp {
-
   static const String routeName = 'BoxConstraintsTweenSample';
 
   @override
@@ -13,16 +12,14 @@ class BoxConstraintsTweenSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   BoxConstraintsTween用来做补间动画。
   和其它 Tween 一样的用法。
   
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   _controller = AnimationController(vsync: this, duration: const Duration(seconds: 1));
   _animation = BoxConstraintsTween(begin: BoxConstraints.tight(Size(50.0, 100.0)), end: BoxConstraints.expand(height: 100.0)).animate(_controller);
   _controller.forward();
@@ -35,16 +32,19 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController _controller;
   Animation<BoxConstraints> _animation;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _animation = BoxConstraintsTween(begin: BoxConstraints.tight(Size(50.0, 100.0)), end: BoxConstraints.loose(Size(100.0, 100.0))).animate(_controller);
-    _controller.addStatusListener((status){
+    _controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _animation = BoxConstraintsTween(
+            begin: BoxConstraints.tight(Size(50.0, 100.0)),
+            end: BoxConstraints.loose(Size(100.0, 100.0)))
+        .animate(_controller);
+    _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         _controller.reverse();
       } else if (status == AnimationStatus.dismissed) {
@@ -52,8 +52,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
       }
     });
     _controller.addListener(() {
-      setState(() {
-      });
+      setState(() {});
     });
     _controller.forward();
   }
@@ -75,7 +74,9 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
           constraints: _animation.value,
           color: Colors.redAccent,
         ),
-        SizedBox(height: 50.0,),
+        SizedBox(
+          height: 50.0,
+        ),
       ],
     );
   }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class BottomAppBarSample extends StatelessWidget {
-
   static const String routeName = 'BottomAppBarSample';
 
   @override
@@ -18,14 +17,22 @@ class BottomAppBarSample extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            IconButton(icon: Icon(Icons.build), onPressed: (){}, color: Colors.white,),
-            IconButton(icon: Icon(Icons.star), onPressed: (){}, color: Colors.white),
-            IconButton(icon: Icon(Icons.satellite), onPressed: (){}, color: Colors.white),
-            IconButton(icon: Icon(Icons.radio), onPressed: (){}, color: Colors.white),
+            IconButton(
+              icon: Icon(Icons.build),
+              onPressed: () {},
+              color: Colors.white,
+            ),
+            IconButton(
+                icon: Icon(Icons.star), onPressed: () {}, color: Colors.white),
+            IconButton(
+                icon: Icon(Icons.satellite),
+                onPressed: () {},
+                color: Colors.white),
+            IconButton(
+                icon: Icon(Icons.radio), onPressed: () {}, color: Colors.white),
           ],
         ),
       ),
     );
   }
-
 }

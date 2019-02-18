@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ButtonThemeSample extends BaseContentApp {
-
   static const String routeName = 'ButtonThemeSample';
 
   @override
@@ -13,8 +12,7 @@ class ButtonThemeSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   ButtonTheme和其它 Theme类似，都是一种 widget， 它是一种可以控制子 widget 相应样式的 widget。
   比如 ButtonTheme 控制 Button 的样式，TextTheme 控制 Text 的样式。
   
@@ -31,8 +29,7 @@ class ButtonThemeSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   ButtonTheme(
     textTheme: ButtonTextTheme.accent,
     height: 150.0,
@@ -43,11 +40,9 @@ class ButtonThemeSample extends BaseContentApp {
     ),
   ),
   ''';
-
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -57,7 +52,7 @@ class _Sample extends StatelessWidget {
         shape: CircleBorder(),
         child: RaisedButton(
           child: Text('自定义ButtonTheme'),
-          onPressed: (){},
+          onPressed: () {},
         ),
       ),
     );

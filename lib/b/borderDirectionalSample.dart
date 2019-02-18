@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BorderDirectionalSample extends BaseContentApp {
-
   static const String routeName = 'BorderDirectionalSample';
 
   @override
@@ -13,8 +12,7 @@ class BorderDirectionalSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   BorderDirectional和Border类似，不过它支持语言书写方向，
   用 start 代替 left，用 end 代替 right，
   在从左到右书写的语言中，start 就是左侧,
@@ -26,8 +24,7 @@ class BorderDirectionalSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   Container(
     width: 100.0,
     height: 100.0,
@@ -41,7 +38,6 @@ class BorderDirectionalSample extends BaseContentApp {
     ),
   );
   ''';
-
 }
 
 class _Sample extends StatelessWidget {
@@ -58,7 +54,8 @@ class _Sample extends StatelessWidget {
                 top: const BorderSide(width: 1.0, color: Colors.blueAccent),
                 start: const BorderSide(width: 1.0, color: Colors.amber),
                 end: const BorderSide(width: 1.0, color: Colors.redAccent),
-                bottom: const BorderSide(width: 1.0, color: Colors.deepPurpleAccent),
+                bottom: const BorderSide(
+                    width: 1.0, color: Colors.deepPurpleAccent),
               ),
             ),
           ),
