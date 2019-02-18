@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ClipPathSample extends BaseContentApp {
-
   static const String routeName = 'ClipPathSample';
 
   @override
@@ -14,15 +13,13 @@ class ClipPathSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   一个 widget，使用指定的Path路径来裁剪子 widget。
   超出区域的内容不会显示。
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   ClipPath(
     clipper: _ImageClipper(),
     child: Image.asset('images/img.jpeg'),
@@ -52,7 +49,6 @@ class ClipPathSample extends BaseContentApp {
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(

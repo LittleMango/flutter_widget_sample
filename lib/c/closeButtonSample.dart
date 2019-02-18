@@ -1,10 +1,8 @@
-import 'dart:ui' show PathOperation;
 import 'package:flutter_ui_demo/base.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CloseButtonSample extends BaseContentApp {
-
   static const String routeName = 'CloseButtonSample';
 
   @override
@@ -14,8 +12,7 @@ class CloseButtonSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
  material设计关闭按钮。
 
  一个CloseButton是IconButton一个“关闭”图标。按下时，关闭按钮调用Navigator.maybePop返回上一个路径。
@@ -24,14 +21,12 @@ class CloseButtonSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   CloseButton();
   ''';
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(

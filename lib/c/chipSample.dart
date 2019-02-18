@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ChipSample extends BaseContentApp {
-
   static const String routeName = 'ChipSample';
 
   @override
@@ -13,8 +12,7 @@ class ChipSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   material 设计的芯片。
 
  芯片是表示属性，文本，实体或动作的紧凑元素。
@@ -25,8 +23,7 @@ class ChipSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   
   ''';
 }
@@ -37,16 +34,13 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
-  String _sample =
-  '''
+  String _sample = '''
   Chip(
       label: Text('只有文本'),
   );  
   ''';
 
   Widget _widget;
-
 
   @override
   void initState() {
@@ -56,13 +50,12 @@ class _SampleState extends State<_Sample> {
 
   void _change(int index) {
     setState(() {
-      switch(index) {
+      switch (index) {
         case 0:
           _widget = Chip(
             label: Text('只有文本'),
           );
-          _sample =
-          '''
+          _sample = '''
         Chip(
             label: Text('只有文本'),
         );
@@ -76,8 +69,7 @@ class _SampleState extends State<_Sample> {
             ),
             label: Text('带头像'),
           );
-          _sample =
-          '''
+          _sample = '''
           Chip(
             avatar: new CircleAvatar(
               backgroundColor: Colors.grey.shade800,
@@ -90,12 +82,12 @@ class _SampleState extends State<_Sample> {
 
         case 2:
           _widget = Chip(
-            shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
+            shape: BeveledRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10.0))),
             backgroundColor: Colors.amber,
             label: Text('自定义形状'),
           );
-          _sample =
-          '''
+          _sample = '''
           Chip(
             shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5.0))),
             backgroundColor: Colors.amber,
@@ -107,11 +99,10 @@ class _SampleState extends State<_Sample> {
           _widget = Chip(
             deleteIcon: Icon(Icons.cancel),
             deleteIconColor: Colors.lightGreen,
-            onDeleted: (){},
+            onDeleted: () {},
             label: Text('增加删除按钮'),
           );
-          _sample =
-          '''
+          _sample = '''
           Chip(
             deleteIcon: Icon(Icons.cancel),
             deleteIconColor: Colors.lightGreen,
@@ -130,8 +121,7 @@ class _SampleState extends State<_Sample> {
             ),
             label: Text('设置 padding'),
           );
-          _sample =
-          '''
+          _sample = '''
           Chip(
             padding: EdgeInsets.all(20.0),
             labelPadding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -161,31 +151,31 @@ class _SampleState extends State<_Sample> {
             children: <Widget>[
               RaisedButton(
                 child: Text('只有文本'),
-                onPressed: (){
+                onPressed: () {
                   _change(0);
                 },
               ),
               RaisedButton(
                 child: Text('带头像'),
-                onPressed: (){
+                onPressed: () {
                   _change(1);
                 },
               ),
               RaisedButton(
                 child: Text('自定义形状'),
-                onPressed: (){
+                onPressed: () {
                   _change(2);
                 },
               ),
               RaisedButton(
                 child: Text('增加删除按钮'),
-                onPressed: (){
+                onPressed: () {
                   _change(3);
                 },
               ),
               RaisedButton(
                 child: Text('设置 padding'),
-                onPressed: (){
+                onPressed: () {
                   _change(4);
                 },
               ),

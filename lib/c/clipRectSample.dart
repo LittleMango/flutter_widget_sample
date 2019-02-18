@@ -1,10 +1,8 @@
-import 'dart:ui' show PathOperation;
 import 'package:flutter_ui_demo/base.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ClipRectSample extends BaseContentApp {
-
   static const String routeName = 'ClipRectSample';
 
   @override
@@ -14,16 +12,14 @@ class ClipRectSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   一个 widget， 沿着子 widget边框来裁剪，或者结合子 widget 的大小计算出需要裁剪的 Rect 区域。
   
   超出区域的内容不会显示。
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   ClipRect(
     clipper: _ImageClipper(),
     child: Image.asset('images/img.jpeg'),
@@ -44,13 +40,13 @@ class ClipRectSample extends BaseContentApp {
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         children: <Widget>[
-          Text('默认是裁剪子控件的大小，会将一些阴影之类的效果裁剪掉，如下右侧的图片是有阴影的，左侧由于使用了 ClipRect，所以阴影被裁剪掉了'),
+          Text(
+              '默认是裁剪子控件的大小，会将一些阴影之类的效果裁剪掉，如下右侧的图片是有阴影的，左侧由于使用了 ClipRect，所以阴影被裁剪掉了'),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[

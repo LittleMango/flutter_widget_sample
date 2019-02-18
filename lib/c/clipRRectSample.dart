@@ -1,10 +1,8 @@
-import 'dart:ui' show PathOperation;
 import 'package:flutter_ui_demo/base.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ClipRRectSample extends BaseContentApp {
-
   static const String routeName = 'ClipRRectSample';
 
   @override
@@ -14,8 +12,7 @@ class ClipRRectSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   一个 widget， 将子 widget的形状裁剪成圆角矩形。
   
   如果想要设置四个角的圆角一样，那么直接设置 borderRadius 属性。
@@ -26,8 +23,7 @@ class ClipRRectSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   ClipRRect(
     clipper: _ImageClipper(),
     child: Image.asset('images/img.jpeg'),
@@ -51,7 +47,6 @@ class ClipRRectSample extends BaseContentApp {
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -77,7 +72,11 @@ class _Sample extends StatelessWidget {
 class _ImageClipper extends CustomClipper<RRect> {
   @override
   RRect getClip(Size size) {
-    return RRect.fromLTRBAndCorners(0.0, size.height / 4, size.width, size.height / 4 * 3,
+    return RRect.fromLTRBAndCorners(
+      0.0,
+      size.height / 4,
+      size.width,
+      size.height / 4 * 3,
       topLeft: Radius.circular(15.0),
       bottomRight: Radius.circular(15.0),
     );

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CircleAvatarSample extends BaseContentApp {
-
   static const String routeName = 'CircleAvatarSample';
 
   @override
@@ -13,8 +12,7 @@ class CircleAvatarSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   通常与用户的个人资料图像一起使用，或者在没有这样的图像的情况下，显示用户的姓名缩写。
   
   如果头像要有图像，则应在backgroundImage属性中指定图像,图像将被裁剪为圆形。
@@ -25,8 +23,7 @@ class CircleAvatarSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   ChoiceChip(
     label: Text('男'),
     labelPadding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -46,7 +43,6 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   @override
   Widget build(BuildContext context) {
     return Column(

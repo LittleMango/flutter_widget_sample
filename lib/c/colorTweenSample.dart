@@ -1,10 +1,8 @@
-import 'dart:ui' show PathOperation;
 import 'package:flutter_ui_demo/base.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ColorTweenSample extends BaseContentApp {
-
   static const String routeName = 'ColorTweenSample';
 
   @override
@@ -14,14 +12,12 @@ class ColorTweenSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
  两种颜色之间的插值。
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
 
     AnimationController _controller;
@@ -62,18 +58,19 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
-
   AnimationController _controller;
   Animation<Color> _animation;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: Duration(seconds: 1));
-    _animation = ColorTween(begin: Colors.deepPurpleAccent, end: Colors.yellowAccent).animate(_controller);
+    _controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+    _animation =
+        ColorTween(begin: Colors.deepPurpleAccent, end: Colors.yellowAccent)
+            .animate(_controller);
     _controller.addListener(() {
-      setState(() {
-      });
+      setState(() {});
     });
     _controller.repeat();
   }

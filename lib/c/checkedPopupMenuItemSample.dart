@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CheckedPopupMenuItemSample extends BaseContentApp {
-
   static const String routeName = 'CheckedPopupMenuItemSample';
 
   @override
@@ -13,8 +12,7 @@ class CheckedPopupMenuItemSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   在material设计弹出菜单中带有复选标记的menu item。
 
   要显示弹出菜单，请使用showMenu函数。
@@ -27,8 +25,7 @@ class CheckedPopupMenuItemSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-  '''
+  String get sampleCode => '''
   class _SampleState extends State<_Sample> {
 
   bool _heroAndScholar = true;
@@ -68,7 +65,7 @@ class CheckedPopupMenuItemSample extends BaseContentApp {
   ''';
 }
 
-enum Commands {heroAndScholar, hurricaneCame }
+enum Commands { heroAndScholar, hurricaneCame }
 
 class _Sample extends StatefulWidget {
   @override
@@ -76,12 +73,11 @@ class _Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<_Sample> {
-
   bool _heroAndScholar = true;
 
   @override
   Widget build(BuildContext context) {
-    return new PopupMenuButton<Commands>(
+    return PopupMenuButton<Commands>(
       onSelected: (Commands result) {
         switch (result) {
           case Commands.heroAndScholar:
@@ -93,21 +89,19 @@ class _SampleState extends State<_Sample> {
             break;
         }
       },
-      itemBuilder: (BuildContext context) =>
-      <PopupMenuEntry<Commands>>[
-        new CheckedPopupMenuItem<Commands>(
-          checked: _heroAndScholar,
-          value: Commands.heroAndScholar,
-          child: const Text('这是一个可以复选菜单项'),
-        ),
-        const PopupMenuDivider(),
-        const PopupMenuItem<Commands>(
-          value: Commands.hurricaneCame,
-          child: const ListTile(
-              leading: const Icon(Icons.star),
-              title: const Text('普通菜单项')),
-        ),
-      ],
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<Commands>>[
+            CheckedPopupMenuItem<Commands>(
+              checked: _heroAndScholar,
+              value: Commands.heroAndScholar,
+              child: const Text('这是一个可以复选菜单项'),
+            ),
+            const PopupMenuDivider(),
+            const PopupMenuItem<Commands>(
+              value: Commands.hurricaneCame,
+              child: const ListTile(
+                  leading: const Icon(Icons.star), title: const Text('普通菜单项')),
+            ),
+          ],
     );
   }
 }

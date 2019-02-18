@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ChoiceChipSample extends BaseContentApp {
-
   static const String routeName = 'ChoiceChipSample';
 
   @override
@@ -13,8 +12,7 @@ class ChoiceChipSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   material设计选择芯片。
 
   ChoiceChip 是一种 Chip，主要用来表示是否选中。
@@ -22,8 +20,7 @@ class ChoiceChipSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   ChoiceChip(
     label: Text('男'),
     labelPadding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -53,7 +50,9 @@ class _SampleState extends State<_Sample> {
     return Column(
       children: <Widget>[
         Text('请选择您的性别'),
-        SizedBox(height: 10.0,),
+        SizedBox(
+          height: 10.0,
+        ),
         Wrap(
           spacing: 10.0,
           children: <Widget>[
@@ -79,9 +78,13 @@ class _SampleState extends State<_Sample> {
             ),
           ],
         ),
-        SizedBox(height: 20.0,),
+        SizedBox(
+          height: 20.0,
+        ),
         Text('请选择您的喜好'),
-        SizedBox(height: 10.0,),
+        SizedBox(
+          height: 10.0,
+        ),
         Wrap(
           spacing: 10.0,
           children: <Widget>[

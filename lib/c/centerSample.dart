@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CenterSample extends BaseContentApp {
-
   static const String routeName = 'CenterSample';
 
   @override
@@ -13,8 +12,7 @@ class CenterSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-  '''
+  String get desc => '''
   Center 是一个 widget，它将位于父widget 可用空间的中心。
   下面示例一中，外层是一个 Row，我们让 Row 的主轴从左侧开始紧凑排列，
   将 Center 放在中间，在水平方向上，由于 Row 是紧凑排列的，所以水平方向上没有空余空间，所以看上去是三个 widget 紧挨在一起。
@@ -27,8 +25,7 @@ class CenterSample extends BaseContentApp {
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   Center(
     widthFactor: 2.0,
     heightFactor: 2.0,
@@ -41,7 +38,6 @@ class CenterSample extends BaseContentApp {
 }
 
 class _Sample extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Column(

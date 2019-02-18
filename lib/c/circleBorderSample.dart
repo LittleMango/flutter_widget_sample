@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CircleBorderSample extends BaseContentApp {
-
   static const String routeName = 'CircleBorderSample';
 
   @override
@@ -13,15 +12,13 @@ class CircleBorderSample extends BaseContentApp {
   Widget get contentWidget => _Sample();
 
   @override
-  String get desc =>
-      '''
+  String get desc => '''
   CircleBorder用来限定一个 widget 的形状为圆形，在这个上下文中超出圆形区域范围之外的内容会被裁剪。
   常配合ShapeDecoration类一起使用。
   ''';
 
   @override
-  String get sampleCode =>
-      '''
+  String get sampleCode => '''
   Container(
     height: 100.0,
     width: 100.0,
@@ -52,7 +49,9 @@ class _SampleState extends State<_Sample> {
               image: DecorationImage(image: AssetImage('images/img.jpeg')),
             ),
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(
+            height: 20.0,
+          ),
           Text('上面的代码为：\n'
               '''
             Container(
@@ -64,7 +63,9 @@ class _SampleState extends State<_Sample> {
             ),
           ),
               '''),
-          SizedBox(height: 20.0,),
+          SizedBox(
+            height: 20.0,
+          ),
           Container(
             height: 100.0,
             width: 100.0,
@@ -74,7 +75,9 @@ class _SampleState extends State<_Sample> {
             ),
             child: Image.asset('images/img.jpeg'),
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(
+            height: 20.0,
+          ),
           Text('上面的代码为：\n'
               '''
             Container(
@@ -87,9 +90,11 @@ class _SampleState extends State<_Sample> {
               child: Image.asset('images/img.jpeg'),
             ),
               '''),
-
-          SizedBox(height: 20.0,),
-          Text('可以看出 CircleBorder 会限制其所修饰 widget 的显示范围，那些不是被修饰 widget 的子 widget 的 widget 不会被裁剪成圆形')
+          SizedBox(
+            height: 20.0,
+          ),
+          Text(
+              '可以看出 CircleBorder 会限制其所修饰 widget 的显示范围，那些不是被修饰 widget 的子 widget 的 widget 不会被裁剪成圆形')
         ],
       ),
     );
