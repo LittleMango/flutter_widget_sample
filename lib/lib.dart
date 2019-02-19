@@ -70,6 +70,10 @@ export 'c/clipRectSample.dart';
 export 'c/clipRRectSample.dart';
 export 'c/closeButtonSample.dart';
 export 'c/colorTweenSample.dart';
+export 'c/columnSample.dart';
+export 'c/constantTweenSample.dart';
+export 'c/curvedAnimationSample.dart';
+export 'c/curveTweenSample.dart';
 
 
 

@@ -16,3 +16,4 @@ doc/api/
 .DS_Store
 .idea/libraries/Dart_Packages.xml
 .idea/workspace.xml
+lib/.DS_Store

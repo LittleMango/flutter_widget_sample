@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'lib.dart';
+
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
-
   List<String> items = getSamples();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter UI Sample'),
-        ),
-        body: ListView.builder(
-          itemCount: items.length,
-          itemBuilder: (context, position) {
-            return _buildItems(context, position);
-          },
-        ),
+      appBar: AppBar(
+        title: Text('Flutter UI Sample'),
+      ),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, position) {
+          return _buildItems(context, position);
+        },
+      ),
     );
   }
 
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
       children: <Widget>[
         ListTile(
           title: Text(routeName),
-          onTap:  () {
+          onTap: () {
             Navigator.pushNamed(context, routeName);
           },
         ),
@@ -108,6 +109,9 @@ List<String> getSamples() {
   list.add(ClipRRectSample.routeName);
   list.add(CloseButtonSample.routeName);
   list.add(ColorTweenSample.routeName);
-
+  list.add(ColumnSample.routeName);
+  list.add(ConstantTweenSample.routeName);
+  list.add(CurvedAnimationSample.routeName);
+  list.add(CurveTweenSample.routeName);
   return list;
 }
