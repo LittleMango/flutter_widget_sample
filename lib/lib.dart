@@ -78,7 +78,16 @@ export 'c/customMultiChildLayoutSample.dart';
 export 'c/customPaintSample.dart';
 export 'c/customScrollViewSample.dart';
 export 'c/customSingleChildLayoutSample.dart';
-
+export 'd/decoratedBoxSample.dart';
+export 'd/decoratedBoxTransitionSample.dart';
+export 'd/decorationImageSample.dart';
+export 'd/decorationTweenSample.dart';
+export 'd/defaultTextStyleSample.dart';
+export 'd/defaultTextStyleTransitionSample.dart';
+export 'd/directionalitySample.dart';
+export 'd/dismissibleSample.dart';
+export 'd/draggableSample.dart';
+export 'd/dragTargetSample.dart';
 
 
 

@@ -90,6 +90,17 @@ class MyApp extends StatelessWidget {
         CustomScrollViewSample.routeName : (BuildContext context) => new CustomScrollViewSample(),
         CustomSingleChildLayoutSample.routeName : (BuildContext context) => new CustomSingleChildLayoutSample(),
 
+        DecoratedBoxSample.routeName : (BuildContext context) => new DecoratedBoxSample(),
+        DecoratedBoxTransitionSample.routeName : (BuildContext context) => new DecoratedBoxTransitionSample(),
+        DecorationImageSample.routeName : (BuildContext context) => new DecorationImageSample(),
+        DecorationTweenSample.routeName : (BuildContext context) => new DecorationTweenSample(),
+        DefaultTextStyleSample.routeName : (BuildContext context) => new DefaultTextStyleSample(),
+        DefaultTextStyleTransitionSample.routeName : (BuildContext context) => new DefaultTextStyleTransitionSample(),
+        DirectionalitySample.routeName : (BuildContext context) => new DirectionalitySample(),
+        DismissibleSample.routeName : (BuildContext context) => new DismissibleSample(),
+        DraggableSample.routeName : (BuildContext context) => new DraggableSample(),
+        DragTargetSample.routeName : (BuildContext context) => new DragTargetSample(),
+
       },
     );
   }

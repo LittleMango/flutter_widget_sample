@@ -117,6 +117,16 @@ List<String> getSamples() {
   list.add(CustomPaintSample.routeName);
   list.add(CustomScrollViewSample.routeName);
   list.add(CustomSingleChildLayoutSample.routeName);
+  list.add(DecoratedBoxSample.routeName);
+  list.add(DecoratedBoxTransitionSample.routeName);
+  list.add(DecorationImageSample.routeName);
+  list.add(DecorationTweenSample.routeName);
+  list.add(DefaultTextStyleSample.routeName);
+  list.add(DefaultTextStyleTransitionSample.routeName);
+  list.add(DirectionalitySample.routeName);
+  list.add(DismissibleSample.routeName);
+  list.add(DraggableSample.routeName);
+  list.add(DragTargetSample.routeName);
 
   return list.reversed.toList();
 }
