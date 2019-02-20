@@ -42,8 +42,8 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
     controller = new AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     animation = BorderRadiusTween(
-        begin: BorderRadius.zero,
-        end: BorderRadius.all(Radius.circular(100)))
+            begin: BorderRadius.zero,
+            end: BorderRadius.all(Radius.circular(100)))
         .animate(CurvedAnimation(parent: controller, curve: Curves.bounceOut));
     controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
@@ -53,8 +53,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
       }
     });
     controller.addListener(() {
-      setState(() {
-      });
+      setState(() {});
     });
     controller.forward();
   }
@@ -83,4 +82,3 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
     );
   }
 }
-

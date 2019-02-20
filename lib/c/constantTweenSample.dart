@@ -36,9 +36,7 @@ class _SampleState extends State<_Sample> with SingleTickerProviderStateMixin {
     super.initState();
     _controller =
         AnimationController(vsync: this, duration: Duration(seconds: 1));
-    _animation =
-        ConstantTween(Colors.teal)
-            .animate(_controller);
+    _animation = ConstantTween(Colors.teal).animate(_controller);
     _controller.addListener(() {
       setState(() {});
     });

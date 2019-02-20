@@ -85,6 +85,10 @@ class MyApp extends StatelessWidget {
         ConstantTweenSample.routeName : (BuildContext context) => new ConstantTweenSample(),
         CurvedAnimationSample.routeName : (BuildContext context) => new CurvedAnimationSample(),
         CurveTweenSample.routeName : (BuildContext context) => new CurveTweenSample(),
+        CustomMultiChildLayoutSample.routeName : (BuildContext context) => new CustomMultiChildLayoutSample(),
+        CustomPaintSample.routeName : (BuildContext context) => new CustomPaintSample(),
+        CustomScrollViewSample.routeName : (BuildContext context) => new CustomScrollViewSample(),
+        CustomSingleChildLayoutSample.routeName : (BuildContext context) => new CustomSingleChildLayoutSample(),
 
       },
     );

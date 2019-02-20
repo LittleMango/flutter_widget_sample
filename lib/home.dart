@@ -113,5 +113,10 @@ List<String> getSamples() {
   list.add(ConstantTweenSample.routeName);
   list.add(CurvedAnimationSample.routeName);
   list.add(CurveTweenSample.routeName);
-  return list;
+  list.add(CustomMultiChildLayoutSample.routeName);
+  list.add(CustomPaintSample.routeName);
+  list.add(CustomScrollViewSample.routeName);
+  list.add(CustomSingleChildLayoutSample.routeName);
+
+  return list.reversed.toList();
 }
