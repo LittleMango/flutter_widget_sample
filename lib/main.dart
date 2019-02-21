@@ -100,6 +100,10 @@ class MyApp extends StatelessWidget {
         DismissibleSample.routeName : (BuildContext context) => new DismissibleSample(),
         DraggableSample.routeName : (BuildContext context) => new DraggableSample(),
         DragTargetSample.routeName : (BuildContext context) => new DragTargetSample(),
+        EdgeInsetsSample.routeName : (BuildContext context) => new EdgeInsetsSample(),
+        EdgeInsetsGeometryTweenSample.routeName : (BuildContext context) => new EdgeInsetsGeometryTweenSample(),
+        EditableTextSample.routeName : (BuildContext context) => new EditableTextSample(),
+        ExpandedSample.routeName : (BuildContext context) => new ExpandedSample(),
 
       },
     );

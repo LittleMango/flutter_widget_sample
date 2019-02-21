@@ -127,6 +127,10 @@ List<String> getSamples() {
   list.add(DismissibleSample.routeName);
   list.add(DraggableSample.routeName);
   list.add(DragTargetSample.routeName);
+  list.add(EdgeInsetsSample.routeName);
+  list.add(EdgeInsetsGeometryTweenSample.routeName);
+  list.add(EditableTextSample.routeName);
+  list.add(ExpandedSample.routeName);
 
   return list.reversed.toList();
 }

@@ -88,6 +88,10 @@ export 'd/directionalitySample.dart';
 export 'd/dismissibleSample.dart';
 export 'd/draggableSample.dart';
 export 'd/dragTargetSample.dart';
+export 'e/edgeInsetsSample.dart';
+export 'e/edgeInsetsGeometryTweenSample.dart';
+export 'e/editableTextSample.dart';
+export 'e/expandedSample.dart';
 
 
 
